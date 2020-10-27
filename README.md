@@ -1,4 +1,4 @@
-## Go Ethereum
+## Go Fdg
 
 Official Golang implementation of the Ethereum protocol.
 
