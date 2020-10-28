@@ -22,17 +22,17 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/liuji3978/fdg-chain"
+	"github.com/liuji3978/fdg-chain/common"
+	"github.com/liuji3978/fdg-chain/common/hexutil"
+	"github.com/liuji3978/fdg-chain/core/rawdb"
+	"github.com/liuji3978/fdg-chain/core/state"
+	"github.com/liuji3978/fdg-chain/core/types"
+	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/eth/filters"
+	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/rpc"
 )
 
 var (

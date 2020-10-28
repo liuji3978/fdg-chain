@@ -24,14 +24,14 @@ import (
 	"os"
 	"path"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/liuji3978/fdg-chain/common"
+	"github.com/liuji3978/fdg-chain/core"
+	"github.com/liuji3978/fdg-chain/core/state"
+	"github.com/liuji3978/fdg-chain/core/types"
+	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/tests"
 	"gopkg.in/urfave/cli.v1"
 )
 

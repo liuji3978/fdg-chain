@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	lps "github.com/ethereum/go-ethereum/les/lespay/server"
-	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/liuji3978/fdg-chain/common/hexutil"
+	"github.com/liuji3978/fdg-chain/common/mclock"
+	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
+	"github.com/liuji3978/fdg-chain/p2p/enode"
 )
 
 var (

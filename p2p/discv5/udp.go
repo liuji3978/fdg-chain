@@ -24,11 +24,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/liuji3978/fdg-chain/common"
+	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/p2p/netutil"
+	"github.com/liuji3978/fdg-chain/rlp"
 )
 
 const Version = 4

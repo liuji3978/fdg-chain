@@ -17,7 +17,7 @@
 package vm
 
 import (
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/liuji3978/fdg-chain/params"
 )
 
 func minSwapStack(n int) int {

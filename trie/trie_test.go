@@ -29,11 +29,11 @@ import (
 	"testing/quick"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb/leveldb"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/liuji3978/fdg-chain/common"
+	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/ethdb/leveldb"
+	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/rlp"
 )
 
 func init() {

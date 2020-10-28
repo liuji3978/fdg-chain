@@ -23,8 +23,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/node"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -21,12 +21,12 @@ import (
 	"net"
 	"os"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/ethtest"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/liuji3978/fdg-chain/cmd/devp2p/internal/ethtest"
+	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/internal/utesting"
+	"github.com/liuji3978/fdg-chain/p2p"
+	"github.com/liuji3978/fdg-chain/p2p/rlpx"
+	"github.com/liuji3978/fdg-chain/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

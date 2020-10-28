@@ -16,13 +16,13 @@
 
 package params
 
-import "github.com/ethereum/go-ethereum/common"
+import "github.com/liuji3978/fdg-chain/common"
 
 // MainnetBootnodes are the enode URLs of the P2P bootstrap nodes running on
 // the main Ethereum network.
 var MainnetBootnodes = []string{
 	// Ethereum Foundation Go Bootnodes
-	"enode://88a846d985666a74342a6a24e7899e9a08aba52f915ce34b22abfdba092c0aba295c3dba6ff933e8ad67e6689a4c073e12b5c905954aae832218a9a5bd3abada@3.15.191.25:30303",
+	"enode://b5e27722e6d3e2efa14da3ffaf932b8b437529700b780560591a5b3f713989306f79399ddc5e8319b0941ffddd162e93d55829e1f41b805ca13deadfb90fb246@3.15.191.25:30303",
 	"enode://d860a01f9722d78051619d1e2351aba3f43f943f6f00718d1b9baa4101932a1f5011f16bb2b1bb35db20d6fe28fa0bf09636d26a87d31de9ec6203eeedb1f666@18.138.108.67:30303",   // bootnode-aws-ap-southeast-1-001
 	"enode://22a8232c3abc76a16ae9d6c3b164f98775fe226f0917b0ca871128a74a8e9630b458460865bab457221f1d448dd9791d24c4e5d88786180ac185df813a68d4de@3.209.45.79:30303",     // bootnode-aws-us-east-1-001
 	"enode://ca6de62fce278f96aea6ec5a2daadb877e51651247cb96ee310a318def462913b653963c155a0ef6c7d50048bba6e6cea881130857413d9f50a621546b590758@34.255.23.113:30303",   // bootnode-aws-eu-west-1-001

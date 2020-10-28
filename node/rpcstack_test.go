@@ -21,9 +21,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/internal/testlog"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/liuji3978/fdg-chain/internal/testlog"
+	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/rpc"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 )

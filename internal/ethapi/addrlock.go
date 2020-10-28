@@ -19,7 +19,7 @@ package ethapi
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/liuji3978/fdg-chain/common"
 )
 
 type AddrLocker struct {

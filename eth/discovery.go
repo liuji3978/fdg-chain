@@ -17,12 +17,12 @@
 package eth
 
 import (
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/dnsdisc"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/liuji3978/fdg-chain/core"
+	"github.com/liuji3978/fdg-chain/core/forkid"
+	"github.com/liuji3978/fdg-chain/p2p"
+	"github.com/liuji3978/fdg-chain/p2p/dnsdisc"
+	"github.com/liuji3978/fdg-chain/p2p/enode"
+	"github.com/liuji3978/fdg-chain/rlp"
 )
 
 // ethEntry is the "eth" ENR entry which advertises eth protocol

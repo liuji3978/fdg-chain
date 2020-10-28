@@ -19,7 +19,7 @@
 package metrics
 
 import (
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/liuji3978/fdg-chain/log"
 	"github.com/shirou/gopsutil/cpu"
 )
 

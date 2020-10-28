@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	lps "github.com/ethereum/go-ethereum/les/lespay/server"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/p2p/nodestate"
+	"github.com/liuji3978/fdg-chain/common/mclock"
+	"github.com/liuji3978/fdg-chain/core/rawdb"
+	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
+	"github.com/liuji3978/fdg-chain/p2p/enode"
+	"github.com/liuji3978/fdg-chain/p2p/enr"
+	"github.com/liuji3978/fdg-chain/p2p/nodestate"
 )
 
 func TestClientPoolL10C100Free(t *testing.T) {

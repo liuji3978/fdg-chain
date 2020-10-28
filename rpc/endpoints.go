@@ -19,7 +19,7 @@ package rpc
 import (
 	"net"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/liuji3978/fdg-chain/log"
 )
 
 // StartIPCEndpoint starts an IPC endpoint.

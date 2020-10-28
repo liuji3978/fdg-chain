@@ -26,12 +26,12 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/liuji3978/fdg-chain/cmd/utils"
+	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/params"
 	"github.com/naoina/toml"
 )
 

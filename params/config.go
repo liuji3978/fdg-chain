@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/liuji3978/fdg-chain/common"
+	"github.com/liuji3978/fdg-chain/crypto"
 )
 
 // Genesis hashes to enforce below configs on.
@@ -74,13 +74,13 @@ var (
 
 	MainnetChainConfig = &ChainConfig{
 		ChainID:             big.NewInt(922),
-		HomesteadBlock:      big.NewInt(1150000),
-		DAOForkBlock:        big.NewInt(1920000),
+		HomesteadBlock:      big.NewInt(0),
+		DAOForkBlock:        big.NewInt(0),
 		DAOForkSupport:      true,
-		EIP150Block:         big.NewInt(2463000),
+		EIP150Block:         big.NewInt(0),
 		EIP150Hash:          common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
-		EIP155Block:         big.NewInt(2675000),
-		EIP158Block:         big.NewInt(2675000),
+		EIP155Block:         big.NewInt(0),
+		EIP158Block:         big.NewInt(0),
 		ByzantiumBlock:      big.NewInt(4370000),
 		ConstantinopleBlock: big.NewInt(7280000),
 		PetersburgBlock:     big.NewInt(7280000),

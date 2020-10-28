@@ -20,8 +20,8 @@
 package node
 
 import (
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/liuji3978/fdg-chain/p2p"
+	"github.com/liuji3978/fdg-chain/rpc"
 )
 
 // NoopLifecycle is a trivial implementation of the Service interface.
