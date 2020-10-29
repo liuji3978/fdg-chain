@@ -20,7 +20,7 @@ import (
 	"context"
 	"sync"
 
-	ethereum "github.com/liuji3978/fdg-chain"
+	"github.com/liuji3978/fdg-chain"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/rpc"
 )

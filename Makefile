@@ -13,9 +13,9 @@ GO ?= latest
 GORUN = env GO111MODULE=on go run
 
 gfdg:
-	$(GORUN) build/ci.go install ./cmd/geth
+	$(GORUN) build/ci.go install ./cmd/gfdg
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+	@echo "Run \"$(GOBIN)/gfdg\" to launch gfdg."
 
 all:
 	$(GORUN) build/ci.go install
