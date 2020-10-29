@@ -36,7 +36,7 @@ directory.
 
 |    Command    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  **`geth`**   | Our main Ethereum CLI client. It is the entry point into the Ethereum network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Ethereum network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `geth --help` and the [CLI Wiki page](https://github.com/liuji3978/fdg-chain/wiki/Command-Line-Options) for command line options.          |
+|  **`gfdg`**   | Our main Ethereum CLI client. It is the entry point into the Ethereum network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Ethereum network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `geth --help` and the [CLI Wiki page](https://github.com/liuji3978/fdg-chain/wiki/Command-Line-Options) for command line options.          |
 |   `abigen`    | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://github.com/liuji3978/fdg-chain/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts) wiki page for details. |
 |  `bootnode`   | Stripped down version of our Ethereum client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks.                                                                                                                                                                                                                                                                 |
 |     `evm`     | Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode. Its purpose is to allow isolated, fine-grained debugging of EVM opcodes (e.g. `evm --code 60ff60ff --debug run`).                                                                                                                                                                                                                                                                     |
@@ -63,12 +63,12 @@ $ geth console
 ```
 
 This command will:
- * Start `geth` in fast sync mode (default, can be changed with the `--syncmode` flag),
+ * Start `gfdg` in fast sync mode (default, can be changed with the `--syncmode` flag),
    causing it to download more data in exchange for avoiding processing the entire history
    of the Ethereum network, which is very CPU intensive.
- * Start up `geth`'s built-in interactive [JavaScript console](https://github.com/liuji3978/fdg-chain/wiki/JavaScript-Console),
+ * Start up `gfdg`'s built-in interactive [JavaScript console](https://github.com/liuji3978/fdg-chain/wiki/JavaScript-Console),
    (via the trailing `console` subcommand) through which you can invoke all official [`web3` methods](https://github.com/ethereum/wiki/wiki/JavaScript-API)
-   as well as `geth`'s own [management APIs](https://github.com/liuji3978/fdg-chain/wiki/Management-APIs).
+   as well as `gfdg`'s own [management APIs](https://github.com/liuji3978/fdg-chain/wiki/Management-APIs).
    This tool is optional and if you leave it out you can always attach to an already running
    `geth` instance with `geth attach`.
 
@@ -170,8 +170,8 @@ accessible from the outside.
 
 As a developer, sooner rather than later you'll want to start interacting with `geth` and the
 Ethereum network via your own programs and not manually through the console. To aid
-this, `geth` has built-in support for a JSON-RPC based APIs ([standard APIs](https://github.com/ethereum/wiki/wiki/JSON-RPC)
-and [`geth` specific APIs](https://github.com/liuji3978/fdg-chain/wiki/Management-APIs)).
+this, `gfdg` has built-in support for a JSON-RPC based APIs ([standard APIs](https://github.com/ethereum/wiki/wiki/JSON-RPC)
+and [`gfdg` specific APIs](https://github.com/liuji3978/fdg-chain/wiki/Management-APIs)).
 These can be exposed via HTTP, WebSockets and IPC (UNIX sockets on UNIX based
 platforms, and named pipes on Windows).
 
@@ -263,7 +263,7 @@ With the genesis state defined in the above JSON file, you'll need to initialize
 set:
 
 ```shell
-$ geth init path/to/genesis.json
+$ gfdg init path/to/genesis.json
 ```
 
 #### Creating the rendezvous point
@@ -294,7 +294,7 @@ probably also be desirable to keep the data directory of your private network se
 do also specify a custom `--datadir` flag.
 
 ```shell
-$ geth --datadir=path/to/custom/data/folder --bootnodes=<bootnode-enode-url-from-above>
+$ gfdg --datadir=path/to/custom/data/folder --bootnodes=<bootnode-enode-url-from-above>
 ```
 
 *Note: Since your network will be completely cut off from the main and test networks, you'll
@@ -314,7 +314,7 @@ ones either). To start a `geth` instance for mining, run it with all your usual 
 by:
 
 ```shell
-$ geth <usual-flags> --mine --miner.threads=1 --etherbase=0x0000000000000000000000000000000000000000
+$ gfdg <usual-flags> --mine --miner.threads=1 --etherbase=0x0000000000000000000000000000000000000000
 ```
 
 Which will start mining blocks and transactions on a single CPU thread, crediting all
