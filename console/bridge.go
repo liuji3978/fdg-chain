@@ -19,6 +19,7 @@ package console
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/liuji3978/fdg-chain/log"
 	"io"
 	"reflect"
 	"strings"
@@ -31,6 +32,7 @@ import (
 	"github.com/liuji3978/fdg-chain/console/prompt"
 	"github.com/liuji3978/fdg-chain/internal/jsre"
 	"github.com/liuji3978/fdg-chain/rpc"
+
 )
 
 // bridge is a collection of JavaScript utility methods to bride the .js runtime
@@ -57,6 +59,7 @@ func getJeth(vm *goja.Runtime) *goja.Object {
 	}
 	return jeth.ToObject(vm)
 }
+
 
 // NewAccount is a wrapper around the personal.newAccount RPC method that uses a
 // non-echoing password prompt to acquire the passphrase and executes the original
@@ -94,6 +97,8 @@ func (b *bridge) NewAccount(call jsre.Call) (goja.Value, error) {
 	if err != nil {
 		return nil, err
 	}
+	log.Warn("Please backup your key file!", "path", strings.Replace(ret.String(),"0x","Gs",1))
+
 	return ret, nil
 }
 

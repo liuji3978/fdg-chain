@@ -22,6 +22,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/liuji3978/fdg-chain/log"
 	"math/big"
 
 	"github.com/liuji3978/fdg-chain"
@@ -85,6 +86,8 @@ func (ec *Client) BlockByHash(ctx context.Context, hash common.Hash) (*types.Blo
 // Note that loading full blocks requires two requests. Use HeaderByNumber
 // if you don't need all transactions or uncle headers.
 func (ec *Client) BlockByNumber(ctx context.Context, number *big.Int) (*types.Block, error) {
+	log.Warn("---getBlock11111111111111-----")
+
 	return ec.getBlock(ctx, "eth_getBlockByNumber", toBlockNumArg(number), true)
 }
 
@@ -102,6 +105,7 @@ type rpcBlock struct {
 }
 
 func (ec *Client) getBlock(ctx context.Context, method string, args ...interface{}) (*types.Block, error) {
+	log.Warn("---getBlock11111111111111-----")
 	var raw json.RawMessage
 	err := ec.c.CallContext(ctx, &raw, method, args...)
 	if err != nil {
@@ -349,6 +353,8 @@ func (ec *Client) NetworkID(ctx context.Context) (*big.Int, error) {
 	}
 	return version, nil
 }
+
+
 
 // BalanceAt returns the wei balance of the given account.
 // The block number can be nil, in which case the balance is taken from the latest known block.

@@ -173,6 +173,9 @@ func (h UnprefixedHash) MarshalText() ([]byte, error) {
 /////////// Address
 
 // Address represents the 20 byte address of an Ethereum account.
+
+type AddressStr string
+
 type Address [AddressLength]byte
 
 // BytesToAddress returns Address with value b.
@@ -196,6 +199,9 @@ func HexToAddress(s string) Address { return BytesToAddress(FromHex(s)) }
 func IsHexAddress(s string) bool {
 	if has0xPrefix(s) {
 		s = s[2:]
+	}
+	if(len(s) == 2*AddressLength && isHex(s)){
+		fmt.Printf("\nYour new key was generated\n\n")
 	}
 	return len(s) == 2*AddressLength && isHex(s)
 }
@@ -225,7 +231,7 @@ func (a Address) Hex() string {
 			result[i] -= 32
 		}
 	}
-	return "0x" + string(result)
+	return "Gs" + string(result)
 }
 
 // String implements fmt.Stringer.
