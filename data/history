@@ -1,0 +1,15 @@
+miner.setEtherbase("Gse2697d2D8263142f1B189A0e7F3faF53Addd215B")
+miner.setEtherbase("0xe2697d2D8263142f1B189A0e7F3faF53Addd215B")
+miner.start();
+miner.setEtherbase("Gse2697d2D8263142f1B189A0e7F3faF53Addd215B")
+miner.start();
+e
+eth.getBlock(12);
+miner.setEtherbase("Gs5a05ff1692fEB2aC123B626a77De3fc21a3Df048")
+miner.start()
+miner.setEtherbase("Gs5a05ff1692fEB2aC123B626a77De3fc21a3Df048")
+miner.start()
+eth.getBlock(12);
+miner.setEtherbase("Gs5a05ff1692fEB2aC123B626a77De3fc21a3Df048")
+eth.getBalance("Gsdbd93c847b0e100e828baafffd50754725a2c901")
+miner.start();
