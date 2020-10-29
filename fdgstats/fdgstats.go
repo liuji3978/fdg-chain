@@ -36,8 +36,8 @@ import (
 	"github.com/liuji3978/fdg-chain/consensus"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/eth"
-	"github.com/liuji3978/fdg-chain/eth/downloader"
+	"github.com/liuji3978/fdg-chain/fdg"
+	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/les"
 	"github.com/liuji3978/fdg-chain/log"
@@ -446,8 +446,8 @@ func (s *Service) login(conn *connWrapper) error {
 
 	var network, protocol string
 	if info := infos.Protocols["eth"]; info != nil {
-		network = fmt.Sprintf("%d", info.(*eth.NodeInfo).Network)
-		protocol = fmt.Sprintf("eth/%d", eth.ProtocolVersions[0])
+		network = fmt.Sprintf("%d", info.(*fdg.NodeInfo).Network)
+		protocol = fmt.Sprintf("eth/%d", fdg.ProtocolVersions[0])
 	} else {
 		network = fmt.Sprintf("%d", infos.Protocols["les"].(*les.NodeInfo).Network)
 		protocol = fmt.Sprintf("les/%d", les.ClientProtocolVersions[0])

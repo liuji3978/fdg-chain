@@ -25,7 +25,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/params"
 	"gopkg.in/urfave/cli.v1"
 )
@@ -116,7 +116,7 @@ func version(ctx *cli.Context) error {
 		fmt.Println("Git Commit Date:", gitDate)
 	}
 	fmt.Println("Architecture:", runtime.GOARCH)
-	fmt.Println("Protocol Versions:", eth.ProtocolVersions)
+	fmt.Println("Protocol Versions:", fdg.ProtocolVersions)
 	fmt.Println("Go Version:", runtime.Version())
 	fmt.Println("Operating System:", runtime.GOOS)
 	fmt.Printf("GOPATH=%s\n", os.Getenv("GOPATH"))

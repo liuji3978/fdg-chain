@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/core/vm"
-	"github.com/liuji3978/fdg-chain/eth/downloader"
+	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/params"

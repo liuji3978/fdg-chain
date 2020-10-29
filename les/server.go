@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
 	"github.com/liuji3978/fdg-chain/light"
@@ -59,7 +59,7 @@ type LesServer struct {
 	p2pSrv *p2p.Server
 }
 
-func NewLesServer(node *node.Node, e *eth.Ethereum, config *eth.Config) (*LesServer, error) {
+func NewLesServer(node *node.Node, e *fdg.Ethereum, config *fdg.Config) (*LesServer, error) {
 	// Collect les protocol version information supported by local node.
 	lesTopics := make([]discv5.Topic, len(AdvertiseProtocolVersions))
 	for i, pv := range AdvertiseProtocolVersions {

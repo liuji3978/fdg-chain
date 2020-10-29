@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-package eth
+package fdg
 
 import (
 	"context"
@@ -30,8 +30,8 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/core/vm"
-	"github.com/liuji3978/fdg-chain/eth/downloader"
-	"github.com/liuji3978/fdg-chain/eth/gasprice"
+	"github.com/liuji3978/fdg-chain/fdg/downloader"
+	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/miner"

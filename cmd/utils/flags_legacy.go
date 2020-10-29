@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/node"
 	"gopkg.in/urfave/cli.v1"
 )
@@ -55,12 +55,12 @@ var (
 	LegacyMinerGasTargetFlag = cli.Uint64Flag{
 		Name:  "targetgaslimit",
 		Usage: "Target gas floor for mined blocks (deprecated, use --miner.gastarget)",
-		Value: eth.DefaultConfig.Miner.GasFloor,
+		Value: fdg.DefaultConfig.Miner.GasFloor,
 	}
 	LegacyMinerGasPriceFlag = BigFlag{
 		Name:  "gasprice",
 		Usage: "Minimum gas price for mining a transaction (deprecated, use --miner.gasprice)",
-		Value: eth.DefaultConfig.Miner.GasPrice,
+		Value: fdg.DefaultConfig.Miner.GasPrice,
 	}
 	LegacyMinerEtherbaseFlag = cli.StringFlag{
 		Name:  "etherbase",
@@ -76,12 +76,12 @@ var (
 	LegacyLightServFlag = cli.IntFlag{
 		Name:  "lightserv",
 		Usage: "Maximum percentage of time allowed for serving LES requests (deprecated, use --light.serve)",
-		Value: eth.DefaultConfig.LightServ,
+		Value: fdg.DefaultConfig.LightServ,
 	}
 	LegacyLightPeersFlag = cli.IntFlag{
 		Name:  "lightpeers",
 		Usage: "Maximum number of light clients to serve, or light servers to attach to  (deprecated, use --light.maxpeers)",
-		Value: eth.DefaultConfig.LightPeers,
+		Value: fdg.DefaultConfig.LightPeers,
 	}
 
 	// (Deprecated April 2020)
@@ -143,12 +143,12 @@ var (
 	LegacyGpoBlocksFlag = cli.IntFlag{
 		Name:  "gpoblocks",
 		Usage: "Number of recent blocks to check for gas prices (deprecated, use --gpo.blocks)",
-		Value: eth.DefaultConfig.GPO.Blocks,
+		Value: fdg.DefaultConfig.GPO.Blocks,
 	}
 	LegacyGpoPercentileFlag = cli.IntFlag{
 		Name:  "gpopercentile",
 		Usage: "Suggested gas price is the given percentile of a set of recent transaction gas prices (deprecated, use --gpo.percentile)",
-		Value: eth.DefaultConfig.GPO.Percentile,
+		Value: fdg.DefaultConfig.GPO.Percentile,
 	}
 	LegacyBootnodesV4Flag = cli.StringFlag{
 		Name:  "bootnodesv4",

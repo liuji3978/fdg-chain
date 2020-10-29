@@ -23,7 +23,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/node"
 	"github.com/stretchr/testify/assert"
 )
@@ -111,7 +111,7 @@ func createNode(t *testing.T, gqlEnabled bool) *node.Node {
 
 func createGQLService(t *testing.T, stack *node.Node, endpoint string) {
 	// create backend
-	ethBackend, err := eth.New(stack, &eth.DefaultConfig)
+	ethBackend, err := fdg.New(stack, &fdg.DefaultConfig)
 	if err != nil {
 		t.Fatalf("could not create eth backend: %v", err)
 	}

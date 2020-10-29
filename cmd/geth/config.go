@@ -27,7 +27,7 @@ import (
 	cli "gopkg.in/urfave/cli.v1"
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/node"
@@ -84,7 +84,7 @@ type whisperDeprecatedConfig struct {
 }
 
 type gethConfig struct {
-	Eth      eth.Config
+	Eth      fdg.Config
 	Shh      whisperDeprecatedConfig
 	Node     node.Config
 	Ethstats ethstatsConfig
@@ -119,7 +119,7 @@ func defaultNodeConfig() node.Config {
 func makeConfigNode(ctx *cli.Context) (*node.Node, gethConfig) {
 	// Load defaults.
 	cfg := gethConfig{
-		Eth:  eth.DefaultConfig,
+		Eth:  fdg.DefaultConfig,
 		Node: defaultNodeConfig(),
 	}
 

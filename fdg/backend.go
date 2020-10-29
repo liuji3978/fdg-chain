@@ -15,7 +15,7 @@
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
 // Package eth implements the Ethereum protocol.
-package eth
+package fdg
 
 import (
 	"errors"
@@ -36,9 +36,9 @@ import (
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/core/vm"
-	"github.com/liuji3978/fdg-chain/eth/downloader"
-	"github.com/liuji3978/fdg-chain/eth/filters"
-	"github.com/liuji3978/fdg-chain/eth/gasprice"
+	"github.com/liuji3978/fdg-chain/fdg/downloader"
+	"github.com/liuji3978/fdg-chain/fdg/filters"
+	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"

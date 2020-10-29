@@ -30,7 +30,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/mclock"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/eth"
+	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
@@ -162,8 +162,8 @@ func (p *peerCommons) String() string {
 }
 
 // Info gathers and returns a collection of metadata known about a peer.
-func (p *peerCommons) Info() *eth.PeerInfo {
-	return &eth.PeerInfo{
+func (p *peerCommons) Info() *fdg.PeerInfo {
+	return &fdg.PeerInfo{
 		Version:    p.version,
 		Difficulty: p.Td(),
 		Head:       fmt.Sprintf("%x", p.Head()),

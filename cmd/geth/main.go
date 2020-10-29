@@ -32,8 +32,8 @@ import (
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/console/prompt"
-	"github.com/liuji3978/fdg-chain/eth"
-	"github.com/liuji3978/fdg-chain/eth/downloader"
+	"github.com/liuji3978/fdg-chain/fdg"
+	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdgclient"
 	"github.com/liuji3978/fdg-chain/internal/debug"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
@@ -445,7 +445,7 @@ func startNode(ctx *cli.Context, stack *node.Node, backend ethapi.Backend) {
 		if ctx.GlobalString(utils.SyncModeFlag.Name) == "light" {
 			utils.Fatalf("Light clients do not support mining")
 		}
-		ethBackend, ok := backend.(*eth.EthAPIBackend)
+		ethBackend, ok := backend.(*fdg.EthAPIBackend)
 		if !ok {
 			utils.Fatalf("Ethereum service not running: %v", err)
 		}
