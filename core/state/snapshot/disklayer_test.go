@@ -25,9 +25,9 @@ import (
 	"github.com/VictoriaMetrics/fastcache"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/ethdb"
-	"github.com/liuji3978/fdg-chain/ethdb/leveldb"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/fdgdb/leveldb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 // reverse reverses the contents of a byte slice. It's used to update random accs
@@ -442,7 +442,7 @@ func TestDiskMidAccountPartialMerge(t *testing.T) {
 // TestDiskSeek tests that seek-operations work on the disk layer
 func TestDiskSeek(t *testing.T) {
 	// Create some accounts in the disk layer
-	var db ethdb.Database
+	var db fdgdb.Database
 
 	if dir, err := ioutil.TempDir("", "disklayer-test"); err != nil {
 		t.Fatal(err)

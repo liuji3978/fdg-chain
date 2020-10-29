@@ -24,7 +24,7 @@ import (
 	"github.com/VictoriaMetrics/fastcache"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 func copyDestructs(destructs map[common.Hash]struct{}) map[common.Hash]struct{} {

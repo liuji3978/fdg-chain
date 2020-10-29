@@ -23,7 +23,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 func TestIterator(t *testing.T) {

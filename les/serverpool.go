@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/les/utils"
 	"github.com/liuji3978/fdg-chain/log"
@@ -55,7 +55,7 @@ const (
 type serverPool struct {
 	clock    mclock.Clock
 	unixTime func() int64
-	db       ethdb.KeyValueStore
+	db       fdgdb.KeyValueStore
 
 	ns           *nodestate.NodeStateMachine
 	vt           *lpc.ValueTracker
@@ -132,7 +132,7 @@ var (
 )
 
 // newServerPool creates a new server pool
-func newServerPool(db ethdb.KeyValueStore, dbKey []byte, vt *lpc.ValueTracker, discovery enode.Iterator, mixTimeout time.Duration, query queryFunc, clock mclock.Clock, trustedURLs []string) *serverPool {
+func newServerPool(db fdgdb.KeyValueStore, dbKey []byte, vt *lpc.ValueTracker, discovery enode.Iterator, mixTimeout time.Duration, query queryFunc, clock mclock.Clock, trustedURLs []string) *serverPool {
 	s := &serverPool{
 		db:           db,
 		clock:        clock,

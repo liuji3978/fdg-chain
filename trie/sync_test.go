@@ -22,7 +22,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 // makeTestTrie create a sample test trie to test node-wise reconstruction.

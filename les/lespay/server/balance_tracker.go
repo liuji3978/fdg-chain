@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/les/utils"
 	"github.com/liuji3978/fdg-chain/p2p/enode"
 	"github.com/liuji3978/fdg-chain/p2p/nodestate"
@@ -87,7 +87,7 @@ type BalanceTracker struct {
 }
 
 // NewBalanceTracker creates a new BalanceTracker
-func NewBalanceTracker(ns *nodestate.NodeStateMachine, setup BalanceTrackerSetup, db ethdb.KeyValueStore, clock mclock.Clock, posExp, negExp utils.ValueExpirer) *BalanceTracker {
+func NewBalanceTracker(ns *nodestate.NodeStateMachine, setup BalanceTrackerSetup, db fdgdb.KeyValueStore, clock mclock.Clock, posExp, negExp utils.ValueExpirer) *BalanceTracker {
 	ndb := newNodeDB(db, clock)
 	bt := &BalanceTracker{
 		ns:                  ns,

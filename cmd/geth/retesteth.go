@@ -38,7 +38,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/core/vm"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/node"
 	"github.com/liuji3978/fdg-chain/params"
@@ -102,7 +102,7 @@ type RetestWeb3API interface {
 }
 
 type RetestethAPI struct {
-	ethDb         ethdb.Database
+	ethDb         fdgdb.Database
 	db            state.Database
 	chainConfig   *params.ChainConfig
 	author        common.Address

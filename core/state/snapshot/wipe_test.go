@@ -22,7 +22,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 // Tests that given a database with random data content, all parts of a snapshot

@@ -20,7 +20,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 )
 
 // Tests that the trie database returns a missing trie node error if attempting

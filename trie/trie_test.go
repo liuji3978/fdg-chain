@@ -31,8 +31,8 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/ethdb/leveldb"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb/leveldb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 	"github.com/liuji3978/fdg-chain/rlp"
 )
 

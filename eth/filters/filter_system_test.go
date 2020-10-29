@@ -32,7 +32,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/bloombits"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/event"
 	"github.com/liuji3978/fdg-chain/params"
 	"github.com/liuji3978/fdg-chain/rpc"
@@ -40,7 +40,7 @@ import (
 
 type testBackend struct {
 	mux             *event.TypeMux
-	db              ethdb.Database
+	db              fdgdb.Database
 	sections        uint64
 	txFeed          event.Feed
 	logsFeed        event.Feed
@@ -49,7 +49,7 @@ type testBackend struct {
 	chainFeed       event.Feed
 }
 
-func (b *testBackend) ChainDb() ethdb.Database {
+func (b *testBackend) ChainDb() fdgdb.Database {
 	return b.db
 }
 

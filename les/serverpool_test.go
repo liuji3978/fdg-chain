@@ -23,8 +23,8 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/ethdb"
-	"github.com/liuji3978/fdg-chain/ethdb/memorydb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/p2p"
 	"github.com/liuji3978/fdg-chain/p2p/enode"
@@ -51,7 +51,7 @@ func testNodeIndex(id enode.ID) int {
 }
 
 type serverPoolTest struct {
-	db                   ethdb.KeyValueStore
+	db                   fdgdb.KeyValueStore
 	clock                *mclock.Simulated
 	quit                 chan struct{}
 	preNeg, preNegFail   bool

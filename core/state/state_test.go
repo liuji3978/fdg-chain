@@ -24,13 +24,13 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 )
 
 var toAddr = common.BytesToAddress
 
 type stateTest struct {
-	db    ethdb.Database
+	db    fdgdb.Database
 	state *StateDB
 }
 

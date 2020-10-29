@@ -22,7 +22,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/ethdb"
+	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/log"
 )
 
@@ -30,7 +30,7 @@ import (
 // and delete all the  data associated with the snapshot (accounts, storage,
 // metadata). After all is done, the snapshot range of the database is compacted
 // to free up unused data blocks.
-func wipeSnapshot(db ethdb.KeyValueStore, full bool) chan struct{} {
+func wipeSnapshot(db fdgdb.KeyValueStore, full bool) chan struct{} {
 	// Wipe the snapshot root marker synchronously
 	if full {
 		rawdb.DeleteSnapshotRoot(db)
@@ -52,7 +52,7 @@ func wipeSnapshot(db ethdb.KeyValueStore, full bool) chan struct{} {
 // as the wiper is meant to run on a background thread but the root needs to be
 // removed in sync to avoid data races. After all is done, the snapshot range of
 // the database is compacted to free up unused data blocks.
-func wipeContent(db ethdb.KeyValueStore) error {
+func wipeContent(db fdgdb.KeyValueStore) error {
 	if err := wipeKeyRange(db, "accounts", rawdb.SnapshotAccountPrefix, len(rawdb.SnapshotAccountPrefix)+common.HashLength); err != nil {
 		return err
 	}
@@ -83,7 +83,7 @@ func wipeContent(db ethdb.KeyValueStore) error {
 
 // wipeKeyRange deletes a range of keys from the database starting with prefix
 // and having a specific total key length.
-func wipeKeyRange(db ethdb.KeyValueStore, kind string, prefix []byte, keylen int) error {
+func wipeKeyRange(db fdgdb.KeyValueStore, kind string, prefix []byte, keylen int) error {
 	// Batch deletions together to avoid holding an iterator for too long
 	var (
 		batch = db.NewBatch()

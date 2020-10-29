@@ -34,7 +34,7 @@ import (
 	"github.com/liuji3978/fdg-chain/console/prompt"
 	"github.com/liuji3978/fdg-chain/eth"
 	"github.com/liuji3978/fdg-chain/eth/downloader"
-	"github.com/liuji3978/fdg-chain/ethclient"
+	"github.com/liuji3978/fdg-chain/fdgclient"
 	"github.com/liuji3978/fdg-chain/internal/debug"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
@@ -380,7 +380,7 @@ func startNode(ctx *cli.Context, stack *node.Node, backend ethapi.Backend) {
 	if err != nil {
 		utils.Fatalf("Failed to attach to self: %v", err)
 	}
-	ethClient := ethclient.NewClient(rpcClient)
+	ethClient := fdgclient.NewClient(rpcClient)
 
 	go func() {
 		// Open any wallets already attached
