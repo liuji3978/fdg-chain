@@ -1,3 +1,4 @@
 log.zip
 data01
 *.zip
+build/bin
