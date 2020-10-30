@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 )
 
 func BenchmarkBloomBits512(b *testing.B) {

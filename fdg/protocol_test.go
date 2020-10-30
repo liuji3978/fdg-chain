@@ -34,10 +34,10 @@ import (
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 func init() {

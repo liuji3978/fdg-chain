@@ -34,8 +34,8 @@ import (
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 // Tests that block headers can be retrieved from a remote chain based on user queries.

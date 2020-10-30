@@ -26,9 +26,9 @@ import (
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/enr"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enr"
 )
 
 const (

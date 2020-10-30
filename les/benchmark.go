@@ -30,11 +30,11 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // requestBenchmark is an interface for different randomized request generators

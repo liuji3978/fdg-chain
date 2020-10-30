@@ -30,7 +30,7 @@ import (
 	mapset "github.com/deckarep/golang-set"
 	"github.com/liuji3978/fdg-chain/accounts"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // Minimum amount of time between cache reloads. This limit applies if the platform does

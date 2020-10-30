@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // deployExplorer creates a new block explorer based on some user input.

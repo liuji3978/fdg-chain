@@ -22,7 +22,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/mclock"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // insertStats tracks and reports on block insertion.

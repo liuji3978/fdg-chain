@@ -27,7 +27,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 )
 

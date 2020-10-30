@@ -27,9 +27,9 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/internal/utesting"
-	"github.com/liuji3978/fdg-chain/p2p/discover"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/p2p/discover"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/light"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 // Test light syncing which will download all headers from genesis.

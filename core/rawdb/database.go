@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/fdgdb/leveldb"
 	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/olekukonko/tablewriter"
 )
 

@@ -24,7 +24,7 @@ import (
 
 	"github.com/dop251/goja"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/signer/core"
 	"github.com/liuji3978/fdg-chain/signer/rules/deps"
 	"github.com/liuji3978/fdg-chain/signer/storage"

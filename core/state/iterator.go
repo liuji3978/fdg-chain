@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/trie"
 )
 

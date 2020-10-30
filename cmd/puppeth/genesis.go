@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 // alethGenesisSpec represents the genesis specification format used by the

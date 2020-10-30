@@ -24,7 +24,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 	"github.com/liuji3978/fdg-chain/metrics/exp"
 	"github.com/fjl/memsize/memsizeui"

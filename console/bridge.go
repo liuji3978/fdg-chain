@@ -19,7 +19,7 @@ package console
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"io"
 	"reflect"
 	"strings"

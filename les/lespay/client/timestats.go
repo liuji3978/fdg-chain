@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/les/utils"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 const (

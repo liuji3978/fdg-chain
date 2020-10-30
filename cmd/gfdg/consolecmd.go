@@ -26,7 +26,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/console"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 	"github.com/liuji3978/fdg-chain/rpc"
 	"gopkg.in/urfave/cli.v1"
 )

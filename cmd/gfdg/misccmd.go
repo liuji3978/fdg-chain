@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
 	"github.com/liuji3978/fdg-chain/fdg"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

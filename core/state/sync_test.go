@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/trie"
 )
 

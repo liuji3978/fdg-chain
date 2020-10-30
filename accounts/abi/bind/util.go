@@ -23,7 +23,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // WaitMined waits for tx to be mined on the blockchain.

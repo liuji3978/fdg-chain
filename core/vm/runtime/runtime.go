@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/vm"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 // Config is a basic type specifying certain configuration flags for running

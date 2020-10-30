@@ -24,7 +24,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/mclock"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/les/utils"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 )
 
 func expval(v uint64) utils.ExpiredValue {

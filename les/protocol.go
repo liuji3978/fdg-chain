@@ -26,8 +26,8 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // Constants to match up protocol versions and messages

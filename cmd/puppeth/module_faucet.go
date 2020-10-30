@@ -27,7 +27,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // faucetDockerfile is the Dockerfile required to build a faucet container to

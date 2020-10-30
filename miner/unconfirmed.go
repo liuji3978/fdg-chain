@@ -22,7 +22,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // chainRetriever is used by the unconfirmed block set to verify whether a previously

@@ -21,7 +21,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // Handler returns a log handler which logs to the unit test log of t.

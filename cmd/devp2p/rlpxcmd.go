@@ -24,9 +24,9 @@ import (
 	"github.com/liuji3978/fdg-chain/cmd/devp2p/internal/ethtest"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/internal/utesting"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/rlpx"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/rlpx"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

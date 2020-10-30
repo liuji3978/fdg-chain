@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 const (

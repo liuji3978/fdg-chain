@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/vm"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/liuji3978/fdg-chain/trie"
 )
 

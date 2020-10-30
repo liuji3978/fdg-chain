@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/liuji3978/fdg-chain/accounts/keystore"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // deployFaucet queries the user for various input on deploying a faucet, after

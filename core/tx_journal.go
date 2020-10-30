@@ -23,8 +23,8 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // errNoActiveJournal is returned if a transaction is attempted to be inserted

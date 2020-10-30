@@ -27,7 +27,7 @@ import (
 	"text/template"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // nodeDockerfile is the Dockerfile required to run an Ethereum node.

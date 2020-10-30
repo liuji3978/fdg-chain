@@ -30,9 +30,9 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 const (

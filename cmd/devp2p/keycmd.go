@@ -21,7 +21,7 @@ import (
 	"net"
 
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -26,12 +26,12 @@ import (
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/p2p/discover"
-	"github.com/liuji3978/fdg-chain/p2p/discv5"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/nat"
-	"github.com/liuji3978/fdg-chain/p2p/netutil"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/p2p/discover"
+	"github.com/liuji3978/fdg-chain/lib/p2p/discv5"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/nat"
+	"github.com/liuji3978/fdg-chain/lib/p2p/netutil"
 )
 
 func main() {

@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/mclock"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 )
 

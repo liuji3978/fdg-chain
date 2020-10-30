@@ -18,7 +18,7 @@ package graphql
 
 import (
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 	"github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/relay"
 )

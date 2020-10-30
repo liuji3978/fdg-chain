@@ -33,8 +33,8 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/fdg"
-	"github.com/liuji3978/fdg-chain/node"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/node"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 // Verify that Client implements the ethereum interfaces.

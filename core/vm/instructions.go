@@ -19,7 +19,7 @@ package vm
 import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/holiman/uint256"
 	"golang.org/x/crypto/sha3"
 )

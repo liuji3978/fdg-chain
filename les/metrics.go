@@ -18,7 +18,7 @@ package les
 
 import (
 	"github.com/liuji3978/fdg-chain/metrics"
-	"github.com/liuji3978/fdg-chain/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
 )
 
 var (

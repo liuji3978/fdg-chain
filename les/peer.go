@@ -36,9 +36,9 @@ import (
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
 	"github.com/liuji3978/fdg-chain/les/utils"
 	"github.com/liuji3978/fdg-chain/light"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 var (

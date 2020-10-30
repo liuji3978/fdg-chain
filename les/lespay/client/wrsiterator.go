@@ -20,8 +20,8 @@ import (
 	"sync"
 
 	"github.com/liuji3978/fdg-chain/les/utils"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/nodestate"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/nodestate"
 )
 
 // WrsIterator returns nodes from the specified selectable set with a weighted random

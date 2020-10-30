@@ -31,7 +31,7 @@ import (
 	"unicode"
 
 	"github.com/liuji3978/fdg-chain/accounts/abi"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // Lang is a target programming language selector to generate bindings for.

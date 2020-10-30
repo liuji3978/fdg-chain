@@ -26,7 +26,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // dashboardContent is the actual dashboard HTML content to serve up when users

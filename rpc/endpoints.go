@@ -19,7 +19,7 @@ package rpc
 import (
 	"net"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // StartIPCEndpoint starts an IPC endpoint.

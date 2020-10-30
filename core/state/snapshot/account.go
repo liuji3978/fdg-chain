@@ -21,7 +21,7 @@ import (
 	"math/big"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // Account is a modified version of a state.Account, where the root is replaced

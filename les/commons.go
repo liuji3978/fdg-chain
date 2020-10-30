@@ -30,12 +30,12 @@ import (
 	"github.com/liuji3978/fdg-chain/fdgclient"
 	"github.com/liuji3978/fdg-chain/les/checkpointoracle"
 	"github.com/liuji3978/fdg-chain/light"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/node"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/discv5"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/node"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/discv5"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 func errResp(code errCode, format string, v ...interface{}) error {

@@ -22,7 +22,7 @@ import (
 	"errors"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // Iterator is a key-value trie iterator that traverses a Trie.

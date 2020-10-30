@@ -38,9 +38,9 @@ import (
 	"github.com/liuji3978/fdg-chain/internal/debug"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 	gopsutil "github.com/shirou/gopsutil/mem"
 	cli "gopkg.in/urfave/cli.v1"
 )

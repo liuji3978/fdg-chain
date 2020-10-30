@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/forkid"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // Constants to match up protocol versions and messages

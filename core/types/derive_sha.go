@@ -20,7 +20,7 @@ import (
 	"bytes"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // DerivableList is the interface which can derive the hash.

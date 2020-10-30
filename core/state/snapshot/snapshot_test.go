@@ -25,7 +25,7 @@ import (
 	"github.com/VictoriaMetrics/fastcache"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 // randomHash generates a random blob of data and returns it as a hash.

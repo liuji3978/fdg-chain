@@ -40,10 +40,10 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/les"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/miner"
-	"github.com/liuji3978/fdg-chain/node"
-	"github.com/liuji3978/fdg-chain/p2p"
+	"github.com/liuji3978/fdg-chain/lib/node"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/rpc"
 	"github.com/gorilla/websocket"
 )

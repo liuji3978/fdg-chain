@@ -24,7 +24,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/mattn/go-colorable"
 )
 

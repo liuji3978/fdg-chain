@@ -33,7 +33,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/internal/jsre"
 	"github.com/liuji3978/fdg-chain/miner"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 )
 
 const (

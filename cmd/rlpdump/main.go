@@ -26,7 +26,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 var (

@@ -25,8 +25,8 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 func TestLegacyReceiptDecoding(t *testing.T) {

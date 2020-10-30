@@ -21,7 +21,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/fdg"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 	"gopkg.in/urfave/cli.v1"
 )
 

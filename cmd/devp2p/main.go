@@ -23,8 +23,8 @@ import (
 	"sort"
 
 	"github.com/liuji3978/fdg-chain/internal/debug"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

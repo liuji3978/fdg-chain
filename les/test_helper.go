@@ -44,9 +44,9 @@ import (
 	"github.com/liuji3978/fdg-chain/les/checkpointoracle"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
 	"github.com/liuji3978/fdg-chain/light"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 var (

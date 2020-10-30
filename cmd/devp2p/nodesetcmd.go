@@ -22,9 +22,9 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/core/forkid"
-	"github.com/liuji3978/fdg-chain/p2p/enr"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enr"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -24,7 +24,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	"github.com/liuji3978/fdg-chain/light"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // LesOdr implements light.OdrBackend

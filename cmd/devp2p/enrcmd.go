@@ -28,9 +28,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/enr"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enr"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

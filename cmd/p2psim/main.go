@@ -46,10 +46,10 @@ import (
 	"text/tabwriter"
 
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/p2p"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/simulations"
-	"github.com/liuji3978/fdg-chain/p2p/simulations/adapters"
+	"github.com/liuji3978/fdg-chain/lib/p2p"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/simulations"
+	"github.com/liuji3978/fdg-chain/lib/p2p/simulations/adapters"
 	"github.com/liuji3978/fdg-chain/rpc"
 	"gopkg.in/urfave/cli.v1"
 )

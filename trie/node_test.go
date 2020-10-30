@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 func newTestFullNode(v []byte) []interface{} {

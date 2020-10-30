@@ -24,7 +24,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/fdg"
-	"github.com/liuji3978/fdg-chain/node"
+	"github.com/liuji3978/fdg-chain/lib/node"
 	"github.com/stretchr/testify/assert"
 )
 

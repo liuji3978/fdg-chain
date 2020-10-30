@@ -35,7 +35,7 @@ import (
 	"strconv"
 
 	"github.com/liuji3978/fdg-chain/core"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 )
 
 type allocItem struct{ Addr, Balance *big.Int }

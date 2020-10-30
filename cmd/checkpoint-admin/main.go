@@ -24,7 +24,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common/fdlimit"
 	"github.com/liuji3978/fdg-chain/internal/flags"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

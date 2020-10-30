@@ -33,7 +33,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/signer/core"
 	"github.com/liuji3978/fdg-chain/signer/fourbyte"
 	"github.com/liuji3978/fdg-chain/signer/storage"

@@ -35,7 +35,7 @@ import (
 
 	mmap "github.com/edsrzf/mmap-go"
 	"github.com/liuji3978/fdg-chain/consensus"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 	"github.com/liuji3978/fdg-chain/rpc"
 	"github.com/hashicorp/golang-lru/simplelru"

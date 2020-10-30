@@ -19,8 +19,8 @@ package main
 import (
 	"time"
 
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 )
 
 type crawler struct {

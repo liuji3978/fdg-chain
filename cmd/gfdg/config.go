@@ -29,9 +29,9 @@ import (
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/node"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/node"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/naoina/toml"
 )
 

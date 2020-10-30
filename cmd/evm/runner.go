@@ -36,8 +36,8 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/vm"
 	"github.com/liuji3978/fdg-chain/core/vm/runtime"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/params"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

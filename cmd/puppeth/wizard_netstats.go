@@ -24,7 +24,7 @@ import (
 	"sync"
 
 	"github.com/liuji3978/fdg-chain/core"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/olekukonko/tablewriter"
 )
 

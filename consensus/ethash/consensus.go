@@ -31,8 +31,8 @@ import (
 	"github.com/liuji3978/fdg-chain/consensus/misc"
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/params"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/params"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/trie"
 	"golang.org/x/crypto/sha3"
 )

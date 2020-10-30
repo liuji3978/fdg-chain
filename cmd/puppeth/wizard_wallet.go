@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // deployWallet creates a new web wallet based on some user input.

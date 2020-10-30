@@ -23,7 +23,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/math"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // pruner is responsible for pruning historical light chain data.

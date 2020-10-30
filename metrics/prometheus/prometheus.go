@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 )
 

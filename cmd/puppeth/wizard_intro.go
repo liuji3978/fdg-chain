@@ -26,7 +26,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // makeWizard creates and returns a new puppeth wizard.

@@ -26,10 +26,10 @@ import (
 	"github.com/liuji3978/fdg-chain/fdgdb"
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
 	"github.com/liuji3978/fdg-chain/les/utils"
-	"github.com/liuji3978/fdg-chain/log"
-	"github.com/liuji3978/fdg-chain/p2p/enode"
-	"github.com/liuji3978/fdg-chain/p2p/enr"
-	"github.com/liuji3978/fdg-chain/p2p/nodestate"
+	"github.com/liuji3978/fdg-chain/lib/log"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
+	"github.com/liuji3978/fdg-chain/lib/p2p/enr"
+	"github.com/liuji3978/fdg-chain/lib/p2p/nodestate"
 )
 
 const (

@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // explorerDockerfile is the Dockerfile required to run a block explorer.

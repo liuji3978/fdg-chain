@@ -31,7 +31,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/vm"
 	"github.com/liuji3978/fdg-chain/fdg/filters"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
-	"github.com/liuji3978/fdg-chain/rlp"
+	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/rpc"
 )
 

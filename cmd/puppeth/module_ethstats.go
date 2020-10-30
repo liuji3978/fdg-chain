@@ -25,7 +25,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // ethstatsDockerfile is the Dockerfile required to build an ethstats backend

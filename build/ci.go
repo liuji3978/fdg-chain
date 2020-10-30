@@ -60,7 +60,7 @@ import (
 
 	"github.com/cespare/cp"
 	"github.com/liuji3978/fdg-chain/internal/build"
-	"github.com/liuji3978/fdg-chain/params"
+	"github.com/liuji3978/fdg-chain/lib/params"
 )
 
 var (

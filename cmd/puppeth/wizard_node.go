@@ -23,7 +23,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/accounts/keystore"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // deployNode creates a new node configuration based on some user input.

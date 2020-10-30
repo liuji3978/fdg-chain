@@ -31,7 +31,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/compiler"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/internal/flags"
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

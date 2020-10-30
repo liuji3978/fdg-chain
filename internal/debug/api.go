@@ -34,7 +34,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // Handler is the global debugging handler.

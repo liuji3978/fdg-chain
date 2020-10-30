@@ -26,7 +26,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/internal/utesting"
-	"github.com/liuji3978/fdg-chain/p2p/discover/v4wire"
+	"github.com/liuji3978/fdg-chain/lib/p2p/discover/v4wire"
 )
 
 const (

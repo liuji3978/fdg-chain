@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/log"
+	"github.com/liuji3978/fdg-chain/lib/log"
 )
 
 // walletDockerfile is the Dockerfile required to run a web wallet.

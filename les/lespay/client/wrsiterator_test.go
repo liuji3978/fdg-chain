@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/p2p/nodestate"
+	"github.com/liuji3978/fdg-chain/lib/p2p/nodestate"
 )
 
 var (
