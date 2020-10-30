@@ -27,7 +27,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 )
 
 // SignerFn is a signer function callback when a contract requires a method to

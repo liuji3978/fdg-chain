@@ -21,7 +21,7 @@ import (
 	"sync"
 
 	"github.com/liuji3978/fdg-chain"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/rpc"
 )
 

@@ -40,7 +40,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/filters"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/miner"

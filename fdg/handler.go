@@ -34,7 +34,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/fetcher"
 	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/p2p"
 	"github.com/liuji3978/fdg-chain/p2p/enode"

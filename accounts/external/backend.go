@@ -26,7 +26,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/rpc"
 	"github.com/liuji3978/fdg-chain/signer/core"

@@ -117,7 +117,7 @@ var (
 	// A debian package is created for all executables listed here.
 
 	debEthereum = debPackage{
-		Name:        "ethereum",
+		Name:        "FDG",
 		Version:     params.Version,
 		Executables: debExecutables,
 	}

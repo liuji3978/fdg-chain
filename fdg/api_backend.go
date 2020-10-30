@@ -33,7 +33,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/miner"
 	"github.com/liuji3978/fdg-chain/params"
 	"github.com/liuji3978/fdg-chain/rpc"

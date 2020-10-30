@@ -32,7 +32,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/mclock"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/p2p/discover"
 	"github.com/liuji3978/fdg-chain/p2p/discv5"

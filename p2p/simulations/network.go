@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/log"
 	"github.com/liuji3978/fdg-chain/p2p"
 	"github.com/liuji3978/fdg-chain/p2p/enode"

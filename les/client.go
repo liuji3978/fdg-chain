@@ -34,7 +34,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/filters"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/light"

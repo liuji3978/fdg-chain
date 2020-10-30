@@ -22,7 +22,7 @@ import (
 	"sync"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 )
 
 // Config contains the settings of the global account manager.

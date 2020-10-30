@@ -43,7 +43,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/accounts"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/log"
 	pcsc "github.com/gballet/go-libpcsclite"
 )

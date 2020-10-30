@@ -12,7 +12,7 @@ import (
 	"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/event"
+	"github.com/liuji3978/fdg-chain/lib/event"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
