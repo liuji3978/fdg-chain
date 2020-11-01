@@ -560,10 +560,13 @@ func (s *PublicBlockChainAPI) Forking(ctx context.Context, rate uint64) (uint64)
 // given block number. The rpc.LatestBlockNumber and rpc.PendingBlockNumber meta
 // block numbers are also allowed.
 func (s *PublicBlockChainAPI) GetBalance(ctx context.Context, address string, blockNrOrHash rpc.BlockNumberOrHash) (*hexutil.Big, error) {
+	log.Warn("---getBalance-"+address)
 	state, _, err := s.b.StateAndHeaderByNumberOrHash(ctx, blockNrOrHash)
 	if state == nil || err != nil {
 		return nil, err
 	}
+	address=strings.Replace(address,"0x","Gs",1);
+	log.Warn("---getBalance-"+address)
 	return (*hexutil.Big)(state.GetBalance(common.HexToAddress(address))), state.Error()
 }
 
