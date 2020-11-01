@@ -358,7 +358,7 @@ func (w *wallet) selfDerive() {
 					balance *big.Int
 					nonce   uint64
 				)
-				balance, err = w.deriveChain.BalanceAt(context, nextAddrs[i].String(), nil)
+				balance, err = w.deriveChain.BalanceAt(context, nextAddrs[i], nil)
 				if err != nil {
 					w.log.Warn("USB wallet balance retrieval failed", "err", err)
 					break
