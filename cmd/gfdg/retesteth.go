@@ -713,13 +713,16 @@ func (api *RetestethAPI) AccountRange(ctx context.Context,
 	return result, nil
 }
 
+
+
 func (api *RetestethAPI) GetBalance(ctx context.Context, address common.Address, blockNr math.HexOrDecimal64) (*math.HexOrDecimal256, error) {
-	//fmt.Printf("GetBalance %x, block %d\n", address, blockNr)
+	fmt.Printf("GetBalance %x, block %d\n", address, blockNr)
 	header := api.blockchain.GetHeaderByNumber(uint64(blockNr))
 	statedb, err := api.blockchain.StateAt(header.Root)
 	if err != nil {
 		return nil, err
 	}
+	log.Warn("getBalance----"+address.String())
 	return (*math.HexOrDecimal256)(statedb.GetBalance(address)), nil
 }
 
