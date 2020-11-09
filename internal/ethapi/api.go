@@ -566,6 +566,7 @@ func (s *PublicBlockChainAPI) GetBalance(ctx context.Context, address string, bl
 		return nil, err
 	}
 	address=strings.Replace(address,"0x","Gs",1);
+
 	log.Warn("---getBalance-"+address)
 	return (*hexutil.Big)(state.GetBalance(common.HexToAddress(address))), state.Error()
 }
@@ -829,6 +830,7 @@ type account struct {
 }
 
 func DoCall(ctx context.Context, b Backend, args CallArgs, blockNrOrHash rpc.BlockNumberOrHash, overrides map[common.Address]account, vmCfg vm.Config, timeout time.Duration, globalGasCap uint64) (*core.ExecutionResult, error) {
+
 	defer func(start time.Time) { log.Debug("Executing EVM call finished", "runtime", time.Since(start)) }(time.Now())
 
 	state, header, err := b.StateAndHeaderByNumberOrHash(ctx, blockNrOrHash)
