@@ -20,6 +20,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"math/big"
 	"reflect"
 	"strconv"
@@ -109,6 +110,7 @@ func UnmarshalFixedText(typname string, input, out []byte) error {
 	if err != nil {
 		return err
 	}
+	log.Warn(typname+"======")
 	if len(raw)/2 != len(out) {
 		return fmt.Errorf("hex string has length %d, want %d for %s", len(raw), len(out)*2, typname)
 	}
@@ -130,6 +132,7 @@ func UnmarshalFixedUnprefixedText(typname string, input, out []byte) error {
 	if err != nil {
 		return err
 	}
+	log.Warn(typname+"======")
 	if len(raw)/2 != len(out) {
 		return fmt.Errorf("hex string has length %d, want %d for %s", len(raw), len(out)*2, typname)
 	}
