@@ -351,6 +351,7 @@ func decodeByteArray(s *Stream, val reflect.Value) error {
 	vlen := val.Len()
 	switch kind {
 	case Byte:
+		//log.Warn("-----大幅度萨芬的",kind);
 		if vlen == 0 {
 			return &decodeError{msg: "input string too long", typ: val.Type()}
 		}
@@ -360,6 +361,7 @@ func decodeByteArray(s *Stream, val reflect.Value) error {
 		bv, _ := s.Uint()
 		val.Index(0).SetUint(bv)
 	case String:
+		//log.Warn("-----decodeByteArray",kind);
 		if uint64(vlen) < size {
 			return &decodeError{msg: "input string too long", typ: val.Type()}
 		}

@@ -22,6 +22,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"io"
 	"reflect"
 	"strings"
@@ -308,6 +309,7 @@ func parsePositionalArguments(rawArgs json.RawMessage, types []reflect.Type) ([]
 }
 
 func parseArgumentArray(dec *json.Decoder, types []reflect.Type) ([]reflect.Value, error) {
+	log.Warn("-parseArgumentArray---",types)
 	args := make([]reflect.Value, 0, len(types))
 	for i := 0; dec.More(); i++ {
 		if i >= len(types) {

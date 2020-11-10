@@ -22,6 +22,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/liuji3978/fdg-chain/lib/log"
 	"io"
 	"io/ioutil"
 	"mime"
@@ -173,6 +174,7 @@ func (c *Client) sendBatchHTTP(ctx context.Context, op *requestOp, msgs []*jsonr
 }
 
 func (hc *httpConn) doRequest(ctx context.Context, msg interface{}) (io.ReadCloser, error) {
+	log.Warn("---doRequest-------")
 	body, err := json.Marshal(msg)
 	if err != nil {
 		return nil, err
