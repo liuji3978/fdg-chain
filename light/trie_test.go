@@ -29,7 +29,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/vm"
 	"github.com/liuji3978/fdg-chain/lib/params"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 func TestNodeIterator(t *testing.T) {

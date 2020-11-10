@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/les/utils"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 	"github.com/liuji3978/fdg-chain/lib/p2p/nodestate"

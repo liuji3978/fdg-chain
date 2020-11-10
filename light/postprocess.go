@@ -31,11 +31,11 @@ import (
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 // IndexerConfig includes a set of configs for chain indexers.

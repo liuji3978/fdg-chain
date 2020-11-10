@@ -23,7 +23,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 )
 
 // Iterator is an iterator to step over all the accounts or the specific

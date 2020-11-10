@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
 	"github.com/liuji3978/fdg-chain/les/utils"
 	"github.com/liuji3978/fdg-chain/lib/log"

@@ -48,7 +48,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
-	"github.com/liuji3978/fdg-chain/fdgclient"
+	"github.com/liuji3978/fdg-chain/lib/fdgclient"
 	"github.com/liuji3978/fdg-chain/fdgstats"
 	"github.com/liuji3978/fdg-chain/les"
 	"github.com/liuji3978/fdg-chain/lib/log"

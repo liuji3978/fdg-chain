@@ -33,14 +33,14 @@ import (
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/fetcher"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 const (

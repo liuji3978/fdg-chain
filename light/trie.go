@@ -26,8 +26,8 @@ import (
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 func NewState(ctx context.Context, head *types.Header, odr OdrBackend) *state.StateDB {

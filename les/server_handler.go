@@ -30,14 +30,14 @@ import (
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/state"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	lps "github.com/liuji3978/fdg-chain/les/lespay/server"
 	"github.com/liuji3978/fdg-chain/light"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 const (

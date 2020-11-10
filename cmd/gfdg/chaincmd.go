@@ -37,7 +37,7 @@ import (
 	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 	"gopkg.in/urfave/cli.v1"
 )
 

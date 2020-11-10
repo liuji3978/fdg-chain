@@ -23,9 +23,9 @@ import (
 	"github.com/VictoriaMetrics/fastcache"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 // diskLayer is a low level persistent snapshot built on top of a key-value store.

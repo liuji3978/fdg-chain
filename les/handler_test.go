@@ -35,7 +35,7 @@ import (
 	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/lib/params"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 func expectResponse(r p2p.MsgReader, msgcode, reqID, bv uint64, data interface{}) error {

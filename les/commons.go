@@ -18,7 +18,7 @@ package les
 
 import (
 	"fmt"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"math/big"
 	"sync"
 
@@ -27,7 +27,7 @@ import (
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/fdg"
-	"github.com/liuji3978/fdg-chain/fdgclient"
+	"github.com/liuji3978/fdg-chain/lib/fdgclient"
 	"github.com/liuji3978/fdg-chain/les/checkpointoracle"
 	"github.com/liuji3978/fdg-chain/light"
 	"github.com/liuji3978/fdg-chain/lib/log"

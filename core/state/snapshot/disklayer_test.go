@@ -25,9 +25,9 @@ import (
 	"github.com/VictoriaMetrics/fastcache"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/fdgdb/leveldb"
-	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb/leveldb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb/memorydb"
 )
 
 // reverse reverses the contents of a byte slice. It's used to update random accs

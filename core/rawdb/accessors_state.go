@@ -18,7 +18,7 @@ package rawdb
 
 import (
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/log"
 )
 

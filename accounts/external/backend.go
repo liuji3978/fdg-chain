@@ -29,7 +29,7 @@ import (
 	"github.com/liuji3978/fdg-chain/lib/event"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/rpc"
-	"github.com/liuji3978/fdg-chain/signer/core"
+	"github.com/liuji3978/fdg-chain/lib/signer/core"
 )
 
 type ExternalBackend struct {

@@ -24,10 +24,10 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb/memorydb"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 // testAccount is the data associated with an account used by the state tests.

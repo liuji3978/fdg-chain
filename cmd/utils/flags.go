@@ -45,7 +45,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
-	"github.com/liuji3978/fdg-chain/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/fdgstats"
 	"github.com/liuji3978/fdg-chain/graphql"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"

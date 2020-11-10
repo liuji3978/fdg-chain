@@ -23,8 +23,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/signer/core"
-	"github.com/liuji3978/fdg-chain/signer/fourbyte"
+	"github.com/liuji3978/fdg-chain/lib/signer/core"
+	"github.com/liuji3978/fdg-chain/lib/signer/fourbyte"
 )
 
 func init() {

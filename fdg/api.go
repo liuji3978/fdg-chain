@@ -37,7 +37,7 @@ import (
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/liuji3978/fdg-chain/rpc"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 // PublicEthereumAPI provides an API to access Ethereum full node-related

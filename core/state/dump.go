@@ -24,7 +24,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
-	"github.com/liuji3978/fdg-chain/trie"
+	"github.com/liuji3978/fdg-chain/lib/trie"
 )
 
 // DumpCollector interface which the state trie calls during iteration

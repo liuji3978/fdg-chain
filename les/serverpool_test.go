@@ -23,8 +23,8 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/fdgdb"
-	"github.com/liuji3978/fdg-chain/fdgdb/memorydb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb"
+	"github.com/liuji3978/fdg-chain/lib/fdgdb/memorydb"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"

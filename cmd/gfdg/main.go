@@ -34,7 +34,7 @@ import (
 	"github.com/liuji3978/fdg-chain/console/prompt"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
-	"github.com/liuji3978/fdg-chain/fdgclient"
+	"github.com/liuji3978/fdg-chain/lib/fdgclient"
 	"github.com/liuji3978/fdg-chain/internal/debug"
 	"github.com/liuji3978/fdg-chain/internal/ethapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
