@@ -35,7 +35,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/filters"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/light"
 	"github.com/liuji3978/fdg-chain/lib/log"
@@ -69,7 +69,7 @@ type LightEthereum struct {
 	eventMux       *event.TypeMux
 	engine         consensus.Engine
 	accountManager *accounts.Manager
-	netRPCService  *ethapi.PublicNetAPI
+	netRPCService  *fdgapi.PublicNetAPI
 
 	p2pServer *p2p.Server
 }
@@ -171,7 +171,7 @@ func New(stack *node.Node, config *fdg.Config) (*LightEthereum, error) {
 		leth.blockchain.DisableCheckFreq()
 	}
 
-	leth.netRPCService = ethapi.NewPublicNetAPI(leth.p2pServer, leth.config.NetworkId)
+	leth.netRPCService = fdgapi.NewPublicNetAPI(leth.p2pServer, leth.config.NetworkId)
 
 	// Register the backend on the node
 	stack.RegisterAPIs(leth.APIs())
@@ -223,7 +223,7 @@ func (s *LightDummyAPI) Mining() bool {
 // APIs returns the collection of RPC services the ethereum package offers.
 // NOTE, some of these services probably need to be moved to somewhere else.
 func (s *LightEthereum) APIs() []rpc.API {
-	apis := ethapi.GetAPIs(s.ApiBackend)
+	apis := fdgapi.GetAPIs(s.ApiBackend)
 	apis = append(apis, s.engine.APIs(s.BlockChain().HeaderChain())...)
 	return append(apis, []rpc.API{
 		{

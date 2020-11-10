@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-package ethapi
+package fdgapi
 
 import (
 	"bytes"
@@ -37,7 +37,7 @@ import (
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/p2p"
@@ -560,13 +560,13 @@ func (s *PublicBlockChainAPI) Forking(ctx context.Context, rate uint64) (uint64)
 // given block number. The rpc.LatestBlockNumber and rpc.PendingBlockNumber meta
 // block numbers are also allowed.
 func (s *PublicBlockChainAPI) GetBalance(ctx context.Context, address string, blockNrOrHash rpc.BlockNumberOrHash) (*hexutil.Big, error) {
-	log.Warn("---getBalance-"+address)
+	//log.Warn("---getBalance-"+address)
 	state, _, err := s.b.StateAndHeaderByNumberOrHash(ctx, blockNrOrHash)
 	if state == nil || err != nil {
 		return nil, err
 	}
 	address=strings.Replace(address,"0x","Gs",1);
-	log.Warn("---getBalance-"+address)
+	//log.Warn("---getBalance-"+address)
 	return (*hexutil.Big)(state.GetBalance(common.HexToAddress(address))), state.Error()
 }
 

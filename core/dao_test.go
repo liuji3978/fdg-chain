@@ -22,7 +22,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/lib/params"
 )
 

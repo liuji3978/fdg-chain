@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/tests"
 	"gopkg.in/urfave/cli.v1"
 )

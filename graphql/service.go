@@ -17,14 +17,14 @@
 package graphql
 
 import (
-	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	"github.com/liuji3978/fdg-chain/lib/node"
 	"github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/relay"
 )
 
 // New constructs a new GraphQL service instance.
-func New(stack *node.Node, backend ethapi.Backend, cors, vhosts []string) error {
+func New(stack *node.Node, backend fdgapi.Backend, cors, vhosts []string) error {
 	if backend == nil {
 		panic("missing backend")
 	}
@@ -34,7 +34,7 @@ func New(stack *node.Node, backend ethapi.Backend, cors, vhosts []string) error 
 
 // newHandler returns a new `http.Handler` that will answer GraphQL queries.
 // It additionally exports an interactive query browser on the / endpoint.
-func newHandler(stack *node.Node, backend ethapi.Backend, cors, vhosts []string) error {
+func newHandler(stack *node.Node, backend fdgapi.Backend, cors, vhosts []string) error {
 	q := Resolver{backend}
 
 	s, err := graphql.ParseSchema(schema, &q)

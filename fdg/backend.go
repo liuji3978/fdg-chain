@@ -35,13 +35,13 @@ import (
 	"github.com/liuji3978/fdg-chain/core/bloombits"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/filters"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/miner"
 	"github.com/liuji3978/fdg-chain/lib/node"
@@ -81,7 +81,7 @@ type Ethereum struct {
 	etherbase common.Address
 
 	networkID     uint64
-	netRPCService *ethapi.PublicNetAPI
+	netRPCService *fdgapi.PublicNetAPI
 
 	p2pServer *p2p.Server
 
@@ -213,7 +213,7 @@ func New(stack *node.Node, config *Config) (*Ethereum, error) {
 	}
 
 	// Start the RPC service
-	eth.netRPCService = ethapi.NewPublicNetAPI(eth.p2pServer, eth.NetVersion())
+	eth.netRPCService = fdgapi.NewPublicNetAPI(eth.p2pServer, eth.NetVersion())
 
 	// Register the backend on the node
 	stack.RegisterAPIs(eth.APIs())
@@ -275,7 +275,7 @@ func CreateConsensusEngine(stack *node.Node, chainConfig *params.ChainConfig, co
 // APIs return the collection of RPC services the ethereum package offers.
 // NOTE, some of these services probably need to be moved to somewhere else.
 func (s *Ethereum) APIs() []rpc.API {
-	apis := ethapi.GetAPIs(s.APIBackend)
+	apis := fdgapi.GetAPIs(s.APIBackend)
 
 	// Append any APIs exposed explicitly by the consensus engine
 	apis = append(apis, s.engine.APIs(s.BlockChain())...)

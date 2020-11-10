@@ -40,7 +40,7 @@ import (
 	"github.com/liuji3978/fdg-chain/consensus/ethash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
-	"github.com/liuji3978/fdg-chain/core/vm"
+	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/crypto"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
@@ -48,7 +48,7 @@ import (
 	"github.com/liuji3978/fdg-chain/lib/fdgdb"
 	"github.com/liuji3978/fdg-chain/fdgstats"
 	"github.com/liuji3978/fdg-chain/graphql"
-	"github.com/liuji3978/fdg-chain/internal/ethapi"
+	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
 	"github.com/liuji3978/fdg-chain/les"
 	"github.com/liuji3978/fdg-chain/lib/log"
@@ -1678,7 +1678,7 @@ func setDNSDiscoveryDefaults(cfg *fdg.Config, genesis common.Hash) {
 }
 
 // RegisterEthService adds an Ethereum client to the stack.
-func RegisterEthService(stack *node.Node, cfg *fdg.Config) ethapi.Backend {
+func RegisterEthService(stack *node.Node, cfg *fdg.Config) fdgapi.Backend {
 	if cfg.SyncMode == downloader.LightSync {
 		backend, err := les.New(stack, cfg)
 		if err != nil {
@@ -1702,14 +1702,14 @@ func RegisterEthService(stack *node.Node, cfg *fdg.Config) ethapi.Backend {
 
 // RegisterEthStatsService configures the Ethereum Stats daemon and adds it to
 // the given node.
-func RegisterEthStatsService(stack *node.Node, backend ethapi.Backend, url string) {
+func RegisterEthStatsService(stack *node.Node, backend fdgapi.Backend, url string) {
 	if err := fdgstats.New(stack, backend, backend.Engine(), url); err != nil {
 		Fatalf("Failed to register the Ethereum Stats service: %v", err)
 	}
 }
 
 // RegisterGraphQLService is a utility function to construct a new service and register it against a node.
-func RegisterGraphQLService(stack *node.Node, backend ethapi.Backend, cfg node.Config) {
+func RegisterGraphQLService(stack *node.Node, backend fdgapi.Backend, cfg node.Config) {
 	if err := graphql.New(stack, backend, cfg.GraphQLCors, cfg.GraphQLVirtualHosts); err != nil {
 		Fatalf("Failed to register the GraphQL service: %v", err)
 	}
