@@ -32,7 +32,7 @@ import (
 	"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/mclock"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/contracts/checkpointoracle/contract"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -171,7 +171,7 @@ func testIndexers(db fdgdb.Database, odr light.OdrBackend, config *light.Indexer
 func newTestClientHandler(backend *backends.SimulatedBackend, odr *LesOdr, indexers []*core.ChainIndexer, db fdgdb.Database, peers *serverPeerSet, ulcServers []string, ulcFraction int) *clientHandler {
 	var (
 		evmux  = new(event.TypeMux)
-		engine = ethash.NewFaker()
+		engine = fdgash.NewFaker()
 		gspec  = core.Genesis{
 			Config:   params.AllEthashProtocolChanges,
 			Alloc:    core.GenesisAlloc{bankAddr: {Balance: bankFunds}},

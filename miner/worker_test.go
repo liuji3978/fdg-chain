@@ -27,7 +27,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/consensus"
 	"github.com/liuji3978/fdg-chain/consensus/clique"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
@@ -111,7 +111,7 @@ func newTestWorkerBackend(t *testing.T, chainConfig *params.ChainConfig, engine 
 		e.Authorize(testBankAddress, func(account accounts.Account, s string, data []byte) ([]byte, error) {
 			return crypto.Sign(crypto.Keccak256(data), testBankKey)
 		})
-	case *ethash.Ethash:
+	case *fdgash.Ethash:
 	default:
 		t.Fatalf("unexpected consensus engine type: %T", engine)
 	}
@@ -203,7 +203,7 @@ func testGenerateBlockAndImport(t *testing.T, isClique bool) {
 		engine = clique.New(chainConfig.Clique, db)
 	} else {
 		chainConfig = params.AllEthashProtocolChanges
-		engine = ethash.NewFaker()
+		engine = fdgash.NewFaker()
 	}
 
 	w, b := newTestWorker(t, chainConfig, engine, db, 0)
@@ -246,7 +246,7 @@ func testGenerateBlockAndImport(t *testing.T, isClique bool) {
 }
 
 func TestEmptyWorkEthash(t *testing.T) {
-	testEmptyWork(t, ethashChainConfig, ethash.NewFaker())
+	testEmptyWork(t, ethashChainConfig, fdgash.NewFaker())
 }
 func TestEmptyWorkClique(t *testing.T) {
 	testEmptyWork(t, cliqueChainConfig, clique.New(cliqueChainConfig.Clique, rawdb.NewMemoryDatabase()))
@@ -298,7 +298,7 @@ func testEmptyWork(t *testing.T, chainConfig *params.ChainConfig, engine consens
 }
 
 func TestStreamUncleBlock(t *testing.T) {
-	ethash := ethash.NewFaker()
+	ethash := fdgash.NewFaker()
 	defer ethash.Close()
 
 	w, b := newTestWorker(t, ethashChainConfig, ethash, rawdb.NewMemoryDatabase(), 1)
@@ -349,7 +349,7 @@ func TestStreamUncleBlock(t *testing.T) {
 }
 
 func TestRegenerateMiningBlockEthash(t *testing.T) {
-	testRegenerateMiningBlock(t, ethashChainConfig, ethash.NewFaker())
+	testRegenerateMiningBlock(t, ethashChainConfig, fdgash.NewFaker())
 }
 
 func TestRegenerateMiningBlockClique(t *testing.T) {
@@ -409,7 +409,7 @@ func testRegenerateMiningBlock(t *testing.T, chainConfig *params.ChainConfig, en
 }
 
 func TestAdjustIntervalEthash(t *testing.T) {
-	testAdjustInterval(t, ethashChainConfig, ethash.NewFaker())
+	testAdjustInterval(t, ethashChainConfig, fdgash.NewFaker())
 }
 
 func TestAdjustIntervalClique(t *testing.T) {

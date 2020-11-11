@@ -30,7 +30,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/common/math"
 	"github.com/liuji3978/fdg-chain/consensus"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/consensus/misc"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -383,9 +383,9 @@ func (api *RetestethAPI) SetChainParams(ctx context.Context, chainParams ChainPa
 	var inner consensus.Engine
 	switch chainParams.SealEngine {
 	case "NoProof", "NoReward":
-		inner = ethash.NewFaker()
+		inner = fdgash.NewFaker()
 	case "Ethash":
-		inner = ethash.New(ethash.Config{
+		inner = fdgash.New(fdgash.Config{
 			CacheDir:         "ethash",
 			CachesInMem:      2,
 			CachesOnDisk:     3,

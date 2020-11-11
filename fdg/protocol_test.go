@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/forkid"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -156,7 +156,7 @@ func TestStatusMsgErrors64(t *testing.T) {
 
 func TestForkIDSplit(t *testing.T) {
 	var (
-		engine = ethash.NewFaker()
+		engine = fdgash.NewFaker()
 
 		configNoFork  = &params.ChainConfig{HomesteadBlock: big.NewInt(1)}
 		configProFork = &params.ChainConfig{

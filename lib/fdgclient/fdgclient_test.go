@@ -27,7 +27,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
@@ -194,7 +194,7 @@ func newTestBackend(t *testing.T) (*node.Node, []*types.Block) {
 	}
 	// Create Ethereum Service
 	config := &fdg.Config{Genesis: genesis}
-	config.Ethash.PowMode = ethash.ModeFake
+	config.Ethash.PowMode = fdgash.ModeFake
 	ethservice, err := fdg.New(n, config)
 	if err != nil {
 		t.Fatalf("can't create new ethereum service: %v", err)
@@ -223,7 +223,7 @@ func generateTestChain() (*core.Genesis, []*types.Block) {
 		g.SetExtra([]byte("test"))
 	}
 	gblock := genesis.ToBlock(db)
-	engine := ethash.NewFaker()
+	engine := fdgash.NewFaker()
 	blocks, _ := core.GenerateChain(config, gblock, engine, db, 1, generate)
 	blocks = append([]*types.Block{gblock}, blocks...)
 	return genesis, blocks

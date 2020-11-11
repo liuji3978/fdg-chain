@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
@@ -44,7 +44,7 @@ func (c Config) MarshalTOML() (interface{}, error) {
 		TrieTimeout             time.Duration
 		SnapshotCache           int
 		Miner                   miner.Config
-		Ethash                  ethash.Config
+		Ethash                  fdgash.Config
 		TxPool                  core.TxPoolConfig
 		GPO                     gasprice.Config
 		EnablePreimageRecording bool
@@ -128,7 +128,7 @@ func (c *Config) UnmarshalTOML(unmarshal func(interface{}) error) error {
 		TrieTimeout             *time.Duration
 		SnapshotCache           *int
 		Miner                   *miner.Config
-		Ethash                  *ethash.Config
+		Ethash                  *fdgash.Config
 		TxPool                  *core.TxPoolConfig
 		GPO                     *gasprice.Config
 		EnablePreimageRecording *bool

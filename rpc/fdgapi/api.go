@@ -34,7 +34,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/common/math"
 	"github.com/liuji3978/fdg-chain/consensus/clique"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/vm"
@@ -1879,7 +1879,7 @@ func (api *PublicDebugAPI) SeedHash(ctx context.Context, number uint64) (string,
 	if block == nil {
 		return "", fmt.Errorf("block #%d not found", number)
 	}
-	return fmt.Sprintf("0x%x", ethash.SeedHash(number)), nil
+	return fmt.Sprintf("0x%x", fdgash.SeedHash(number)), nil
 }
 
 // PrivateDebugAPI is the collection of Ethereum APIs exposed over the private

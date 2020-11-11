@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/state"
@@ -161,7 +161,7 @@ func createMiner(t *testing.T) (*Miner, *event.TypeMux) {
 	// Create event Mux
 	mux := new(event.TypeMux)
 	// Create consensus engine
-	engine := ethash.New(ethash.Config{}, []string{}, false)
+	engine := fdgash.New(fdgash.Config{}, []string{}, false)
 	engine.SetThreads(-1)
 	// Create isLocalBlock
 	isLocalBlock := func(block *types.Block) bool {

@@ -23,7 +23,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/vm"
 	"github.com/liuji3978/fdg-chain/lib/fdgdb"
@@ -120,10 +120,10 @@ func TestSetupGenesis(t *testing.T) {
 				// Advance to block #4, past the homestead transition block of customg.
 				genesis := oldcustomg.MustCommit(db)
 
-				bc, _ := NewBlockChain(db, nil, oldcustomg.Config, ethash.NewFullFaker(), vm.Config{}, nil, nil)
+				bc, _ := NewBlockChain(db, nil, oldcustomg.Config, fdgash.NewFullFaker(), vm.Config{}, nil, nil)
 				defer bc.Stop()
 
-				blocks, _ := GenerateChain(oldcustomg.Config, genesis, ethash.NewFaker(), db, 4, nil)
+				blocks, _ := GenerateChain(oldcustomg.Config, genesis, fdgash.NewFaker(), db, 4, nil)
 				bc.InsertChain(blocks)
 				bc.CurrentBlock()
 				// This should return a compatibility error.

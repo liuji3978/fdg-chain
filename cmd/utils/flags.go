@@ -37,7 +37,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/fdlimit"
 	"github.com/liuji3978/fdg-chain/consensus"
 	"github.com/liuji3978/fdg-chain/consensus/clique"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/vm"
@@ -1811,9 +1811,9 @@ func MakeChain(ctx *cli.Context, stack *node.Node, readOnly bool) (chain *core.B
 	if config.Clique != nil {
 		engine = clique.New(config.Clique, chainDb)
 	} else {
-		engine = ethash.NewFaker()
+		engine = fdgash.NewFaker()
 		if !ctx.GlobalBool(FakePoWFlag.Name) {
-			engine = ethash.New(ethash.Config{
+			engine = fdgash.New(fdgash.Config{
 				CacheDir:         stack.ResolvePath(fdg.DefaultConfig.Ethash.CacheDir),
 				CachesInMem:      fdg.DefaultConfig.Ethash.CachesInMem,
 				CachesOnDisk:     fdg.DefaultConfig.Ethash.CachesOnDisk,

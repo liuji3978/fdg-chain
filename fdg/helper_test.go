@@ -29,7 +29,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/forkid"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -55,7 +55,7 @@ var (
 func newTestProtocolManager(mode downloader.SyncMode, blocks int, generator func(int, *core.BlockGen), newtx chan<- []*types.Transaction) (*ProtocolManager, fdgdb.Database, error) {
 	var (
 		evmux  = new(event.TypeMux)
-		engine = ethash.NewFaker()
+		engine = fdgash.NewFaker()
 		db     = rawdb.NewMemoryDatabase()
 		gspec  = &core.Genesis{
 			Config: params.TestChainConfig,
@@ -64,7 +64,7 @@ func newTestProtocolManager(mode downloader.SyncMode, blocks int, generator func
 		genesis       = gspec.MustCommit(db)
 		blockchain, _ = core.NewBlockChain(db, nil, gspec.Config, engine, vm.Config{}, nil, nil)
 	)
-	chain, _ := core.GenerateChain(gspec.Config, genesis, ethash.NewFaker(), db, blocks, generator)
+	chain, _ := core.GenerateChain(gspec.Config, genesis, fdgash.NewFaker(), db, blocks, generator)
 	if _, err := blockchain.InsertChain(chain); err != nil {
 		panic(err)
 	}

@@ -30,7 +30,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/consensus"
 	"github.com/liuji3978/fdg-chain/consensus/clique"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/bloombits"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -240,24 +240,24 @@ func makeExtraData(extra []byte) []byte {
 }
 
 // CreateConsensusEngine creates the required type of consensus engine instance for an Ethereum service
-func CreateConsensusEngine(stack *node.Node, chainConfig *params.ChainConfig, config *ethash.Config, notify []string, noverify bool, db fdgdb.Database) consensus.Engine {
+func CreateConsensusEngine(stack *node.Node, chainConfig *params.ChainConfig, config *fdgash.Config, notify []string, noverify bool, db fdgdb.Database) consensus.Engine {
 	// If proof-of-authority is requested, set it up
 	if chainConfig.Clique != nil {
 		return clique.New(chainConfig.Clique, db)
 	}
 	// Otherwise assume proof-of-work
 	switch config.PowMode {
-	case ethash.ModeFake:
+	case fdgash.ModeFake:
 		log.Warn("Ethash used in fake mode")
-		return ethash.NewFaker()
-	case ethash.ModeTest:
+		return fdgash.NewFaker()
+	case fdgash.ModeTest:
 		log.Warn("Ethash used in test mode")
-		return ethash.NewTester(nil, noverify)
-	case ethash.ModeShared:
+		return fdgash.NewTester(nil, noverify)
+	case fdgash.ModeShared:
 		log.Warn("Ethash used in shared mode")
-		return ethash.NewShared()
+		return fdgash.NewShared()
 	default:
-		engine := ethash.New(ethash.Config{
+		engine := fdgash.New(fdgash.Config{
 			CacheDir:         stack.ResolvePath(config.CacheDir),
 			CachesInMem:      config.CachesInMem,
 			CachesOnDisk:     config.CachesOnDisk,

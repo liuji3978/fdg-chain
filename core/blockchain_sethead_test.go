@@ -28,7 +28,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/vm"
@@ -1765,7 +1765,7 @@ func testSetHead(t *testing.T, tt *rewindTest) {
 	// Initialize a fresh chain
 	var (
 		genesis = new(Genesis).MustCommit(db)
-		engine  = ethash.NewFullFaker()
+		engine  = fdgash.NewFullFaker()
 	)
 	chain, err := NewBlockChain(db, nil, params.AllEthashProtocolChanges, engine, vm.Config{}, nil, nil)
 	if err != nil {

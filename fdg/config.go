@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
@@ -50,7 +50,7 @@ var DefaultLightGPOConfig = gasprice.Config{
 // DefaultConfig contains default settings for use on the Ethereum main net.
 var DefaultConfig = Config{
 	SyncMode: downloader.FastSync,
-	Ethash: ethash.Config{
+	Ethash: fdgash.Config{
 		CacheDir:         "ethash",
 		CachesInMem:      2,
 		CachesOnDisk:     3,
@@ -154,7 +154,7 @@ type Config struct {
 	Miner miner.Config
 
 	// Ethash options
-	Ethash ethash.Config
+	Ethash fdgash.Config
 
 	// Transaction pool options
 	TxPool core.TxPoolConfig

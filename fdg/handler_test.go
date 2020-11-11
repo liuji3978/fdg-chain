@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/state"
@@ -491,11 +491,11 @@ func testCheckpointChallenge(t *testing.T, syncmode downloader.SyncMode, checkpo
 		}
 	}
 	// Create a checkpoint aware protocol manager
-	blockchain, err := core.NewBlockChain(db, nil, config, ethash.NewFaker(), vm.Config{}, nil, nil)
+	blockchain, err := core.NewBlockChain(db, nil, config, fdgash.NewFaker(), vm.Config{}, nil, nil)
 	if err != nil {
 		t.Fatalf("failed to create new blockchain: %v", err)
 	}
-	pm, err := NewProtocolManager(config, cht, syncmode, DefaultConfig.NetworkId, new(event.TypeMux), &testTxPool{pool: make(map[common.Hash]*types.Transaction)}, ethash.NewFaker(), blockchain, db, 1, nil)
+	pm, err := NewProtocolManager(config, cht, syncmode, DefaultConfig.NetworkId, new(event.TypeMux), &testTxPool{pool: make(map[common.Hash]*types.Transaction)}, fdgash.NewFaker(), blockchain, db, 1, nil)
 	if err != nil {
 		t.Fatalf("failed to start test protocol manager: %v", err)
 	}
@@ -572,7 +572,7 @@ func TestBroadcastBlock(t *testing.T) {
 func testBroadcastBlock(t *testing.T, totalPeers, broadcastExpected int) {
 	var (
 		evmux   = new(event.TypeMux)
-		pow     = ethash.NewFaker()
+		pow     = fdgash.NewFaker()
 		db      = rawdb.NewMemoryDatabase()
 		config  = &params.ChainConfig{}
 		gspec   = &core.Genesis{Config: config}
@@ -595,7 +595,7 @@ func testBroadcastBlock(t *testing.T, totalPeers, broadcastExpected int) {
 
 		peers = append(peers, peer)
 	}
-	chain, _ := core.GenerateChain(gspec.Config, genesis, ethash.NewFaker(), db, 1, func(i int, gen *core.BlockGen) {})
+	chain, _ := core.GenerateChain(gspec.Config, genesis, fdgash.NewFaker(), db, 1, func(i int, gen *core.BlockGen) {})
 	pm.BroadcastBlock(chain[0], true /*propagate*/)
 
 	errCh := make(chan error, totalPeers)
@@ -636,7 +636,7 @@ func testBroadcastBlock(t *testing.T, totalPeers, broadcastExpected int) {
 func TestBroadcastMalformedBlock(t *testing.T) {
 	// Create a live node to test propagation with
 	var (
-		engine  = ethash.NewFaker()
+		engine  = fdgash.NewFaker()
 		db      = rawdb.NewMemoryDatabase()
 		config  = &params.ChainConfig{}
 		gspec   = &core.Genesis{Config: config}
@@ -662,7 +662,7 @@ func TestBroadcastMalformedBlock(t *testing.T) {
 	defer sink.close()
 
 	// Create various combinations of malformed blocks
-	chain, _ := core.GenerateChain(gspec.Config, genesis, ethash.NewFaker(), db, 1, func(i int, gen *core.BlockGen) {})
+	chain, _ := core.GenerateChain(gspec.Config, genesis, fdgash.NewFaker(), db, 1, func(i int, gen *core.BlockGen) {})
 
 	malformedUncles := chain[0].Header()
 	malformedUncles.UncleHash[0]++

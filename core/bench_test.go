@@ -25,7 +25,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/math"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/vm"
@@ -171,11 +171,11 @@ func benchInsertChain(b *testing.B, disk bool, gen func(int, *BlockGen)) {
 		Alloc:  GenesisAlloc{benchRootAddr: {Balance: benchRootFunds}},
 	}
 	genesis := gspec.MustCommit(db)
-	chain, _ := GenerateChain(gspec.Config, genesis, ethash.NewFaker(), db, b.N, gen)
+	chain, _ := GenerateChain(gspec.Config, genesis, fdgash.NewFaker(), db, b.N, gen)
 
 	// Time the insertion of the new chain.
 	// State and blocks are stored in the same DB.
-	chainman, _ := NewBlockChain(db, nil, gspec.Config, ethash.NewFaker(), vm.Config{}, nil, nil)
+	chainman, _ := NewBlockChain(db, nil, gspec.Config, fdgash.NewFaker(), vm.Config{}, nil, nil)
 	defer chainman.Stop()
 	b.ReportAllocs()
 	b.ResetTimer()
@@ -287,7 +287,7 @@ func benchReadChain(b *testing.B, full bool, count uint64) {
 		if err != nil {
 			b.Fatalf("error opening database at %v: %v", dir, err)
 		}
-		chain, err := NewBlockChain(db, nil, params.TestChainConfig, ethash.NewFaker(), vm.Config{}, nil, nil)
+		chain, err := NewBlockChain(db, nil, params.TestChainConfig, fdgash.NewFaker(), vm.Config{}, nil, nil)
 		if err != nil {
 			b.Fatalf("error creating chain: %v", err)
 		}

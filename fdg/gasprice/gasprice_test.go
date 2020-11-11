@@ -23,7 +23,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
 	"github.com/liuji3978/fdg-chain/core/types"
@@ -65,7 +65,7 @@ func newTestBackend(t *testing.T) *testBackend {
 		}
 		signer = types.NewEIP155Signer(gspec.Config.ChainID)
 	)
-	engine := ethash.NewFaker()
+	engine := fdgash.NewFaker()
 	db := rawdb.NewMemoryDatabase()
 	genesis, _ := gspec.Commit(db)
 

@@ -27,7 +27,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/console/prompt"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/fdg"
@@ -102,8 +102,8 @@ func newTester(t *testing.T, confOverride func(*fdg.Config)) *tester {
 		Miner: miner.Config{
 			Etherbase: common.HexToAddress(testAddress),
 		},
-		Ethash: ethash.Config{
-			PowMode: ethash.ModeTest,
+		Ethash: fdgash.Config{
+			PowMode: fdgash.ModeTest,
 		},
 	}
 	if confOverride != nil {

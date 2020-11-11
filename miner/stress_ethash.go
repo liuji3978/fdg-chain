@@ -31,7 +31,7 @@ import (
 	"github.com/liuji3978/fdg-chain/accounts/keystore"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/fdlimit"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/types"
 	"github.com/liuji3978/fdg-chain/lib/crypto"
@@ -55,7 +55,7 @@ func main() {
 		faucets[i], _ = crypto.GenerateKey()
 	}
 	// Pre-generate the ethash mining DAG so we don't race
-	ethash.MakeDataset(1, filepath.Join(os.Getenv("HOME"), ".ethash"))
+	fdgash.MakeDataset(1, filepath.Join(os.Getenv("HOME"), ".ethash"))
 
 	// Create an Ethash network based off of the Ropsten config
 	genesis := makeGenesis(faucets)

@@ -30,7 +30,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/common/math"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/core"
 	"github.com/liuji3978/fdg-chain/core/bloombits"
 	"github.com/liuji3978/fdg-chain/core/rawdb"
@@ -77,7 +77,7 @@ type SimulatedBackend struct {
 func NewSimulatedBackendWithDatabase(database fdgdb.Database, alloc core.GenesisAlloc, gasLimit uint64) *SimulatedBackend {
 	genesis := core.Genesis{Config: params.AllEthashProtocolChanges, GasLimit: gasLimit, Alloc: alloc}
 	genesis.MustCommit(database)
-	blockchain, _ := core.NewBlockChain(database, nil, genesis.Config, ethash.NewFaker(), vm.Config{}, nil, nil)
+	blockchain, _ := core.NewBlockChain(database, nil, genesis.Config, fdgash.NewFaker(), vm.Config{}, nil, nil)
 
 	backend := &SimulatedBackend{
 		database:   database,
@@ -122,7 +122,7 @@ func (b *SimulatedBackend) Rollback() {
 }
 
 func (b *SimulatedBackend) rollback() {
-	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), ethash.NewFaker(), b.database, 1, func(int, *core.BlockGen) {})
+	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), fdgash.NewFaker(), b.database, 1, func(int, *core.BlockGen) {})
 	stateDB, _ := b.blockchain.State()
 
 	b.pendingBlock = blocks[0]
@@ -566,7 +566,7 @@ func (b *SimulatedBackend) SendTransaction(ctx context.Context, tx *types.Transa
 		panic(fmt.Errorf("invalid transaction nonce: got %d, want %d", tx.Nonce(), nonce))
 	}
 
-	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), ethash.NewFaker(), b.database, 1, func(number int, block *core.BlockGen) {
+	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), fdgash.NewFaker(), b.database, 1, func(number int, block *core.BlockGen) {
 		for _, tx := range b.pendingBlock.Transactions() {
 			block.AddTxWithChain(b.blockchain, tx)
 		}
@@ -684,7 +684,7 @@ func (b *SimulatedBackend) AdjustTime(adjustment time.Duration) error {
 		return errors.New("Could not adjust time on non-empty block")
 	}
 
-	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), ethash.NewFaker(), b.database, 1, func(number int, block *core.BlockGen) {
+	blocks, _ := core.GenerateChain(b.config, b.blockchain.CurrentBlock(), fdgash.NewFaker(), b.database, 1, func(number int, block *core.BlockGen) {
 		block.OffsetTime(int64(adjustment.Seconds()))
 	})
 	stateDB, _ := b.blockchain.State()

@@ -30,7 +30,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/les/flowcontrol"
@@ -494,7 +494,7 @@ func testSim(t *testing.T, serverCount, clientCount int, serverDir, clientDir []
 func newLesClientService(ctx *adapters.ServiceContext, stack *node.Node) (node.Lifecycle, error) {
 	config := fdg.DefaultConfig
 	config.SyncMode = downloader.LightSync
-	config.Ethash.PowMode = ethash.ModeFake
+	config.Ethash.PowMode = fdgash.ModeFake
 	return New(stack, &config)
 }
 

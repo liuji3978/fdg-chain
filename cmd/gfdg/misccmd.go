@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
-	"github.com/liuji3978/fdg-chain/consensus/ethash"
+	"github.com/liuji3978/fdg-chain/consensus/fdgash"
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/lib/params"
 	"gopkg.in/urfave/cli.v1"
@@ -86,7 +86,7 @@ func makecache(ctx *cli.Context) error {
 	if err != nil {
 		utils.Fatalf("Invalid block number: %v", err)
 	}
-	ethash.MakeCache(block, args[1])
+	fdgash.MakeCache(block, args[1])
 
 	return nil
 }
@@ -101,7 +101,7 @@ func makedag(ctx *cli.Context) error {
 	if err != nil {
 		utils.Fatalf("Invalid block number: %v", err)
 	}
-	ethash.MakeDataset(block, args[1])
+	fdgash.MakeDataset(block, args[1])
 
 	return nil
 }
