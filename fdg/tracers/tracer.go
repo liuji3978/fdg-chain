@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/vm"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	duktape "gopkg.in/olebedev/go-duktape.v3"
 )

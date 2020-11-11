@@ -22,7 +22,7 @@ import (
 	"os"
 
 	"github.com/liuji3978/fdg-chain/cmd/devp2p/internal/ethtest"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/internal/utesting"
 	"github.com/liuji3978/fdg-chain/lib/p2p"
 	"github.com/liuji3978/fdg-chain/lib/p2p/rlpx"

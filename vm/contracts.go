@@ -24,10 +24,10 @@ import (
 
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/math"
-	"github.com/liuji3978/fdg-chain/crypto"
-	"github.com/liuji3978/fdg-chain/crypto/blake2b"
-	"github.com/liuji3978/fdg-chain/crypto/bls12381"
-	"github.com/liuji3978/fdg-chain/crypto/bn256"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto/blake2b"
+	"github.com/liuji3978/fdg-chain/lib/crypto/bls12381"
+	"github.com/liuji3978/fdg-chain/lib/crypto/bn256"
 	"github.com/liuji3978/fdg-chain/lib/params"
 
 	//lint:ignore SA1019 Needed for precompile

@@ -28,7 +28,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"github.com/syndtr/goleveldb/leveldb"

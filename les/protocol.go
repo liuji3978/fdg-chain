@@ -24,7 +24,7 @@ import (
 	"math/big"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	lpc "github.com/liuji3978/fdg-chain/les/lespay/client"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 	"github.com/liuji3978/fdg-chain/lib/rlp"

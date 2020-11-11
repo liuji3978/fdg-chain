@@ -25,7 +25,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/accounts/keystore"
 	"github.com/liuji3978/fdg-chain/cmd/utils"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/pborman/uuid"
 	"gopkg.in/urfave/cli.v1"
 )

@@ -23,7 +23,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"gopkg.in/urfave/cli.v1"
 )
 

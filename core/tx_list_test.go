@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 // Tests that transactions can be added to strict lists and list contents and

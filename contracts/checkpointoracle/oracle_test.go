@@ -32,7 +32,7 @@ import (
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/contracts/checkpointoracle/contract"
 	"github.com/liuji3978/fdg-chain/core"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/params"
 )
 

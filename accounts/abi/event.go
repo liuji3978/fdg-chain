@@ -21,7 +21,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 // Event is an event potentially triggered by the EVM's LOG mechanism. The Event

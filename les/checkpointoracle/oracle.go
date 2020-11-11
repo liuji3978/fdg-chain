@@ -28,7 +28,7 @@ import (
 	"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/contracts/checkpointoracle"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/params"
 )

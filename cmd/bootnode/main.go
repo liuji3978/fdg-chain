@@ -25,7 +25,7 @@ import (
 	"os"
 
 	"github.com/liuji3978/fdg-chain/cmd/utils"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/p2p/discover"
 	"github.com/liuji3978/fdg-chain/lib/p2p/discv5"

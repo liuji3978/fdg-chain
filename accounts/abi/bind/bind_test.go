@@ -291,7 +291,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -346,7 +346,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -392,7 +392,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -450,7 +450,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/common"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -498,7 +498,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -593,7 +593,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -643,7 +643,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/common"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -718,7 +718,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -812,7 +812,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/common"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -1002,7 +1002,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -1137,7 +1137,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 
 		`
@@ -1279,7 +1279,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -1345,7 +1345,7 @@ var bindTests = []struct {
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 		"github.com/liuji3978/fdg-chain/core"
-		"github.com/liuji3978/fdg-chain/crypto"
+		"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 		// Initialize test accounts
@@ -1432,7 +1432,7 @@ var bindTests = []struct {
 
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
-		"github.com/liuji3978/fdg-chain/crypto"
+		"github.com/liuji3978/fdg-chain/lib/crypto"
 		"github.com/liuji3978/fdg-chain/core"
 		`,
 		`
@@ -1495,7 +1495,7 @@ var bindTests = []struct {
 
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 		"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
-		"github.com/liuji3978/fdg-chain/crypto"
+		"github.com/liuji3978/fdg-chain/lib/crypto"
 		"github.com/liuji3978/fdg-chain/core"
         `,
 		`
@@ -1558,7 +1558,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 		`,
 		`
 			// Generate a new random account and a funded simulator
@@ -1623,7 +1623,7 @@ var bindTests = []struct {
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 			"github.com/liuji3978/fdg-chain/accounts/abi/bind/backends"
 			"github.com/liuji3978/fdg-chain/core"
-			"github.com/liuji3978/fdg-chain/crypto"
+			"github.com/liuji3978/fdg-chain/lib/crypto"
 	   `,
 		`
 			key, _ := crypto.GenerateKey()

@@ -21,7 +21,7 @@ import (
 	"math/big"
 
 	"github.com/liuji3978/fdg-chain/common/hexutil"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 type bytesBacked interface {

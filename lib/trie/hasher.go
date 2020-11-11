@@ -19,7 +19,7 @@ package trie
 import (
 	"sync"
 
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/rlp"
 	"golang.org/x/crypto/sha3"
 )

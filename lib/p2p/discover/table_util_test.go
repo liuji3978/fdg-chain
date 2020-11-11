@@ -27,7 +27,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enr"

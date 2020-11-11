@@ -24,7 +24,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enr"
 )
 

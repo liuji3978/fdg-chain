@@ -42,7 +42,7 @@ import (
 	"fmt"
 	"hash"
 
-	ethcrypto "github.com/liuji3978/fdg-chain/crypto"
+	ethcrypto "github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 var (

@@ -27,7 +27,7 @@ import (
 	"time"
 
 	"github.com/liuji3978/fdg-chain/common/bitutil"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 // bloomIndexes represents the bit indexes inside the bloom filter that belong

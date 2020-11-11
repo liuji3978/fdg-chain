@@ -25,7 +25,7 @@ import (
 
 	"github.com/liuji3978/fdg-chain/cmd/devp2p/internal/v4test"
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/internal/utesting"
 	"github.com/liuji3978/fdg-chain/lib/p2p/discover"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"

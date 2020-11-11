@@ -29,7 +29,7 @@ import (
 	"github.com/liuji3978/fdg-chain/accounts/abi/bind"
 	"github.com/liuji3978/fdg-chain/cmd/utils"
 	"github.com/liuji3978/fdg-chain/common/compiler"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/internal/flags"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"gopkg.in/urfave/cli.v1"

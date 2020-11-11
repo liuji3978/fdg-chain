@@ -29,7 +29,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/lib/p2p/discover/v4wire"
 	"github.com/liuji3978/fdg-chain/lib/p2p/enode"

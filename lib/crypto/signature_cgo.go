@@ -24,7 +24,7 @@ import (
 	"fmt"
 
 	"github.com/liuji3978/fdg-chain/common/math"
-	"github.com/liuji3978/fdg-chain/crypto/secp256k1"
+	"github.com/liuji3978/fdg-chain/lib/crypto/secp256k1"
 )
 
 // Ecrecover returns the uncompressed public key that created the given signature.

@@ -31,7 +31,7 @@ import (
 	"strings"
 
 	"github.com/liuji3978/fdg-chain/common"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 // Node represents a host on the network.

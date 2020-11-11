@@ -22,7 +22,7 @@ import (
 	ethereum "github.com/liuji3978/fdg-chain"
 	"github.com/liuji3978/fdg-chain/accounts"
 	"github.com/liuji3978/fdg-chain/core/types"
-	"github.com/liuji3978/fdg-chain/crypto"
+	"github.com/liuji3978/fdg-chain/lib/crypto"
 )
 
 // keystoreWallet implements the accounts.Wallet interface for the original
