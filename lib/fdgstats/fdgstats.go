@@ -39,7 +39,7 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg"
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/lib/event"
-	"github.com/liuji3978/fdg-chain/les"
+	"github.com/liuji3978/fdg-chain/lib/les"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/miner"
 	"github.com/liuji3978/fdg-chain/lib/node"

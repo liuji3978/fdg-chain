@@ -50,7 +50,7 @@ import (
 	//"github.com/liuji3978/fdg-chain/graphql"
 	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
-	"github.com/liuji3978/fdg-chain/les"
+	"github.com/liuji3978/fdg-chain/lib/les"
 	"github.com/liuji3978/fdg-chain/lib/log"
 	"github.com/liuji3978/fdg-chain/metrics"
 	"github.com/liuji3978/fdg-chain/metrics/exp"
