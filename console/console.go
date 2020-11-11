@@ -303,7 +303,7 @@ func (c *Console) Welcome() {
 
 	// Print some generic Geth metadata
 	if res, err := c.jsre.Run(`
-		var message = "instance: " + web3.version.node + "\n";
+		var message = "instance:  GFDG 1.0 \n";
 		try {
 			message += "coinbase: " + eth.coinbase + "\n";
 		} catch (err) {}
@@ -323,6 +323,8 @@ func (c *Console) Welcome() {
 		}
 		sort.Strings(modules)
 		message += " modules: " + strings.Join(modules, " ") + "\n"
+		message=strings.Replace(message,"eth","fdg",1);
+		message=strings.Replace(message,"eth","fdg",2);
 	}
 	fmt.Fprintln(c.printer, message)
 }

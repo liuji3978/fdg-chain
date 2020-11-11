@@ -249,7 +249,7 @@ func (n *Node) doClose(errs []error) error {
 
 // startNetworking starts all network endpoints.
 func (n *Node) startNetworking() error {
-	n.log.Info("Starting peer-to-peer node", "instance", n.server.Name)
+	n.log.Info("Starting peer-to-peer node", "instance", "GFDG")
 	if err := n.server.Start(); err != nil {
 		return convertFileLockError(err)
 	}

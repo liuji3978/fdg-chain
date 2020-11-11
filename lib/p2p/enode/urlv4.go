@@ -180,7 +180,7 @@ func (n *Node) URLv4() string {
 	default:
 		nodeid = fmt.Sprintf("%s.%x", scheme, n.id[:])
 	}
-	u := url.URL{Scheme: "enode"}
+	u := url.URL{Scheme: "fnode"}
 	if n.Incomplete() {
 		u.Host = nodeid
 	} else {
