@@ -26,8 +26,8 @@ import (
 	"time"
 
 	"github.com/dop251/goja"
-	"github.com/liuji3978/fdg-chain/accounts/scwallet"
-	"github.com/liuji3978/fdg-chain/accounts/usbwallet"
+	"github.com/liuji3978/fdg-chain/wallet/scwallet"
+	"github.com/liuji3978/fdg-chain/wallet/usbwallet"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/console/prompt"
 	"github.com/liuji3978/fdg-chain/internal/jsre"

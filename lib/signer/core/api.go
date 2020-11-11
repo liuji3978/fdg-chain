@@ -27,8 +27,8 @@ import (
 
 	"github.com/liuji3978/fdg-chain/accounts"
 	"github.com/liuji3978/fdg-chain/accounts/keystore"
-	"github.com/liuji3978/fdg-chain/accounts/scwallet"
-	"github.com/liuji3978/fdg-chain/accounts/usbwallet"
+	"github.com/liuji3978/fdg-chain/wallet/scwallet"
+	"github.com/liuji3978/fdg-chain/wallet/usbwallet"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/rpc/fdgapi"

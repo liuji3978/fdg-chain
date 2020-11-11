@@ -28,7 +28,7 @@ import (
 	"math/big"
 
 	"github.com/liuji3978/fdg-chain/accounts"
-	"github.com/liuji3978/fdg-chain/accounts/usbwallet/trezor"
+	"github.com/liuji3978/fdg-chain/wallet/usbwallet/trezor"
 	"github.com/liuji3978/fdg-chain/common"
 	"github.com/liuji3978/fdg-chain/common/hexutil"
 	"github.com/liuji3978/fdg-chain/core/types"

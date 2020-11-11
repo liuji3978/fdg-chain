@@ -46,8 +46,8 @@ import (
 	"github.com/liuji3978/fdg-chain/fdg/downloader"
 	"github.com/liuji3978/fdg-chain/fdg/gasprice"
 	"github.com/liuji3978/fdg-chain/lib/fdgdb"
-	"github.com/liuji3978/fdg-chain/fdgstats"
-	"github.com/liuji3978/fdg-chain/graphql"
+	"github.com/liuji3978/fdg-chain/lib/fdgstats"
+	//"github.com/liuji3978/fdg-chain/graphql"
 	"github.com/liuji3978/fdg-chain/rpc/fdgapi"
 	"github.com/liuji3978/fdg-chain/internal/flags"
 	"github.com/liuji3978/fdg-chain/les"
@@ -1710,9 +1710,9 @@ func RegisterEthStatsService(stack *node.Node, backend fdgapi.Backend, url strin
 
 // RegisterGraphQLService is a utility function to construct a new service and register it against a node.
 func RegisterGraphQLService(stack *node.Node, backend fdgapi.Backend, cfg node.Config) {
-	if err := graphql.New(stack, backend, cfg.GraphQLCors, cfg.GraphQLVirtualHosts); err != nil {
-		Fatalf("Failed to register the GraphQL service: %v", err)
-	}
+	//if err := graphql.New(stack, backend, cfg.GraphQLCors, cfg.GraphQLVirtualHosts); err != nil {
+	//	Fatalf("Failed to register the GraphQL service: %v", err)
+	//}
 }
 
 func SetupMetrics(ctx *cli.Context) {
