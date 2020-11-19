@@ -339,7 +339,7 @@ func DefaultGenesisBlock() *Genesis {
 		Nonce:      66,
 		GasLimit:   8000000,
 		Timestamp:  1601956800,
-		Difficulty: big.NewInt(8000000),
+		Difficulty: big.NewInt(6291450),
 		Alloc:      decodePrealloc(mainnetAllocData),
 	}
 }
