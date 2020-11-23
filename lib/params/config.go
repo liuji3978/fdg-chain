@@ -73,14 +73,14 @@ var (
 	}
 
 	MainnetChainConfig = &ChainConfig{
-		ChainID:             big.NewInt(922),
-		HomesteadBlock:      big.NewInt(0),
-		DAOForkBlock:        big.NewInt(0),
+		ChainID:             big.NewInt(1),
+		HomesteadBlock:      big.NewInt(1150000),
+		DAOForkBlock:        big.NewInt(1920000),
 		DAOForkSupport:      true,
-		EIP150Block:         big.NewInt(0),
+		EIP150Block:         big.NewInt(2463000),
 		EIP150Hash:          common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
-		EIP155Block:         big.NewInt(0),
-		EIP158Block:         big.NewInt(0),
+		EIP155Block:         big.NewInt(2675000),
+		EIP158Block:         big.NewInt(2675000),
 		ByzantiumBlock:      big.NewInt(4370000),
 		ConstantinopleBlock: big.NewInt(7280000),
 		PetersburgBlock:     big.NewInt(7280000),
@@ -88,6 +88,17 @@ var (
 		MuirGlacierBlock:    big.NewInt(9200000),
 		Ethash:              new(EthashConfig),
 	}
+
+	//MainnetChainConfig = &ChainConfig{
+	//	ChainID:             big.NewInt(922),
+	//	HomesteadBlock:      big.NewInt(0),
+	//	DAOForkBlock:        big.NewInt(0),
+	//	EIP150Block:         big.NewInt(0),
+	//	EIP150Hash:          common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
+	//	EIP155Block:         big.NewInt(0),
+	//	EIP158Block:         big.NewInt(0),
+	//	ByzantiumBlock:      big.NewInt(5256000),
+	//}
 
 	// MainnetTrustedCheckpoint contains the light client trusted checkpoint for the main network.
 	MainnetTrustedCheckpoint = &TrustedCheckpoint{
