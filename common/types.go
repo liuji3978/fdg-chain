@@ -186,6 +186,14 @@ func BytesToAddress(b []byte) Address {
 	return a
 }
 
+func BytesToAddressGs(b []byte) Address {
+	var a Address
+
+	a.SetBytes(b)
+
+	return a
+}
+
 // BigToAddress returns Address with byte values of b.
 // If b is larger than len(h), b will be cropped from the left.
 func BigToAddress(b *big.Int) Address { return BytesToAddress(b.Bytes()) }
@@ -194,6 +202,10 @@ func BigToAddress(b *big.Int) Address { return BytesToAddress(b.Bytes()) }
 // If s is larger than len(h), s will be cropped from the left.
 func HexToAddress(s string) Address {
 	return BytesToAddress(FromHex(s))
+}
+
+func HexToAddressGs(s string) Address {
+	return BytesToAddressGs(FromHex(s))
 }
 
 // IsHexAddress verifies whether a string can represent a valid hex-encoded
@@ -250,6 +262,7 @@ func (a Address) Format(s fmt.State, c rune) {
 // SetBytes sets the address to the value of b.
 // If b is larger than len(a) it will panic.
 func (a *Address) SetBytes(b []byte) {
+
 	if len(b) > len(a) {
 		b = b[len(b)-AddressLength:]
 	}

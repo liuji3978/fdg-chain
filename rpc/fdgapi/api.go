@@ -767,6 +767,15 @@ func (s *PublicBlockChainAPI) GetStorageAt(ctx context.Context, address common.A
 
 // CallArgs represents the arguments for a call.
 type CallArgs struct {
+	From     string `json:"from"`
+	To       string `json:"to"`
+	Gas      *hexutil.Uint64 `json:"gas"`
+	GasPrice *hexutil.Big    `json:"gasPrice"`
+	Value    *hexutil.Big    `json:"value"`
+	Data     *hexutil.Bytes  `json:"data"`
+}
+
+type CallArgsGs struct {
 	From     *common.Address `json:"from"`
 	To       *common.Address `json:"to"`
 	Gas      *hexutil.Uint64 `json:"gas"`
@@ -779,8 +788,17 @@ type CallArgs struct {
 func (args *CallArgs) ToMessage(globalGasCap uint64) types.Message {
 	// Set sender address or use zero address if none specified.
 	var addr common.Address
-	if args.From != nil {
-		addr = *args.From
+	if len(args.From)>0 {
+		addr = common.HexToAddress(args.From)
+	}
+
+	result := &CallArgsGs{
+		From:     common.HexToAddress(args.From),
+		To:       common.HexToAddress(args.To),
+		Gas:      args.Gas,
+		GasPrice: args.GasPrice,
+		Value:    args.Value,
+		Data:     args.Data,
 	}
 
 	// Set default gas & gas price if none were set
@@ -809,8 +827,12 @@ func (args *CallArgs) ToMessage(globalGasCap uint64) types.Message {
 	if args.Data != nil {
 		data = []byte(*args.Data)
 	}
+	log.Warn("setMessage start")
+	log.Warn(args.To)
 
-	msg := types.NewMessage(addr, args.To, 0, value, gas, gasPrice, data, false)
+	log.Warn("setMessage end")
+
+	msg := types.NewMessage(addr, common.HexToAddressGs(args.To), 0, value, gas, gasPrice, data, false)
 	return msg
 }
 
@@ -965,9 +987,10 @@ func DoEstimateGas(ctx context.Context, b Backend, args CallArgs, blockNrOrHash 
 		cap uint64
 	)
 	// Use zero address if sender unspecified.
-	if args.From == nil {
-		args.From = new(common.Address)
-	}
+
+	//if args.From == nil {
+	//	args.From = new(common.Address)
+	//}
 	// Determine the highest gas limit can be used during the estimation.
 	if args.Gas != nil && uint64(*args.Gas) >= params.TxGas {
 		hi = uint64(*args.Gas)
@@ -988,7 +1011,7 @@ func DoEstimateGas(ctx context.Context, b Backend, args CallArgs, blockNrOrHash 
 		if err != nil {
 			return 0, err
 		}
-		balance := state.GetBalance(*args.From) // from can't be nil
+		balance := state.GetBalance(common.HexToAddress(args.From)) // from can't be nil
 		available := new(big.Int).Set(balance)
 		if args.Value != nil {
 			if args.Value.ToInt().Cmp(available) >= 0 {
@@ -1567,8 +1590,8 @@ func (args *SendTxArgs) setDefaults(ctx context.Context, b Backend) error {
 			input = args.Data
 		}
 		callArgs := CallArgs{
-			From:     &args.From, // From shouldn't be nil
-			To:       args.To,
+			From:     args.From.String(), // From shouldn't be nil
+			To:       args.To.String(),
 			GasPrice: args.GasPrice,
 			Value:    args.Value,
 			Data:     input,
