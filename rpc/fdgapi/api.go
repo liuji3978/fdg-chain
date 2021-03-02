@@ -275,19 +275,19 @@ func (s *PrivateAccountAPI) DeriveAccount(url string, path string, pin *bool) (a
 }
 
 // NewAccount will create a new account and returns the address for the new account.
-func (s *PrivateAccountAPI) NewAccount(password string) (common.Address, error) {
+func (s *PrivateAccountAPI) NewAccount(password string) (string, error) {
 	ks, err := fetchKeystore(s.am)
 	if err != nil {
-		return common.Address{}, err
+		return common.Address{}.String(), err
 	}
 	acc, err := ks.NewAccount(password)
 	if err == nil {
 		log.Info("Your new key was generated", "address", acc.Address)
 		log.Warn("Please backup your key file!", "path", acc.URL.Path)
 		log.Warn("Please remember your password!")
-		return acc.Address, nil
+		return acc.Address.String(), nil
 	}
-	return common.Address{}, err
+	return common.Address{}.String(), err
 }
 
 // fetchKeystore retrieves the encrypted keystore from the account manager.
@@ -300,17 +300,17 @@ func fetchKeystore(am *accounts.Manager) (*keystore.KeyStore, error) {
 
 // ImportRawKey stores the given hex encoded ECDSA key into the key directory,
 // encrypting it with the passphrase.
-func (s *PrivateAccountAPI) ImportRawKey(privkey string, password string) (common.Address, error) {
+func (s *PrivateAccountAPI) ImportRawKey(privkey string, password string) (string, error) {
 	key, err := crypto.HexToECDSA(privkey)
 	if err != nil {
-		return common.Address{}, err
+		return common.Address{}.String(), err
 	}
 	ks, err := fetchKeystore(s.am)
 	if err != nil {
-		return common.Address{}, err
+		return common.Address{}.String(), err
 	}
 	acc, err := ks.ImportECDSA(key, password)
-	return acc.Address, err
+	return acc.Address.String(), err
 }
 
 // UnlockAccount will unlock the account associated with the given address with
@@ -767,6 +767,16 @@ func (s *PublicBlockChainAPI) GetStorageAt(ctx context.Context, address common.A
 
 // CallArgs represents the arguments for a call.
 type CallArgs struct {
+	From     *common.Address `json:"from"`
+	To       *common.Address `json:"to"`
+	Gas      *hexutil.Uint64 `json:"gas"`
+	GasPrice *hexutil.Big    `json:"gasPrice"`
+	Value    *hexutil.Big    `json:"value"`
+	Data     *hexutil.Bytes  `json:"data"`
+
+}
+
+type CallArgsGs struct {
 	From     string `json:"from"`
 	To       string `json:"to"`
 	Gas      *hexutil.Uint64 `json:"gas"`
@@ -775,30 +785,54 @@ type CallArgs struct {
 	Data     *hexutil.Bytes  `json:"data"`
 }
 
-type CallArgsGs struct {
-	From     *common.Address `json:"from"`
-	To       *common.Address `json:"to"`
-	Gas      *hexutil.Uint64 `json:"gas"`
-	GasPrice *hexutil.Big    `json:"gasPrice"`
-	Value    *hexutil.Big    `json:"value"`
-	Data     *hexutil.Bytes  `json:"data"`
-}
-
 // ToMessage converts CallArgs to the Message type used by the core evm
 func (args *CallArgs) ToMessage(globalGasCap uint64) types.Message {
-	// Set sender address or use zero address if none specified.
-	var addr common.Address
-	if len(args.From)>0 {
-		addr = common.HexToAddress(args.From)
-	}
+	//Set sender address or use zero address if none specified.
+	//var addr common.Address
+	//if args!=nil {
+	//	addr = common.HexToAddress(args.From);
+	//}
+	//
+	//
+	//
+	//// Set default gas & gas price if none were set
+	//gas := globalGasCap
+	//if gas == 0 {
+	//	gas = uint64(math.MaxUint64 / 2)
+	//}
+	//if args.Gas != nil {
+	//	gas = uint64(*args.Gas)
+	//}
+	//if globalGasCap != 0 && globalGasCap < gas {
+	//	log.Warn("Caller gas above allowance, capping", "requested", gas, "cap", globalGasCap)
+	//	gas = globalGasCap
+	//}
+	//gasPrice := new(big.Int)
+	//if args.GasPrice != nil {
+	//	gasPrice = args.GasPrice.ToInt()
+	//}
+	//
+	//value := new(big.Int)
+	//if args.Value != nil {
+	//	value = args.Value.ToInt()
+	//}
+	//
+	//var data []byte
+	//if args.Data != nil {
+	//	data = []byte(*args.Data)
+	//}
+	//log.Warn("setMessage start")
+	//log.Warn(args.To)
+    //var addressTo common.Address;
+	//addressTo=common.HexToAddress(args.To);
+	//log.Warn("setMessage end")
+	//
+	//msg := types.NewMessage(addr, &addressTo, 0, value, gas, gasPrice, data, false)
+	//return msg
 
-	result := &CallArgsGs{
-		From:     common.HexToAddress(args.From),
-		To:       common.HexToAddress(args.To),
-		Gas:      args.Gas,
-		GasPrice: args.GasPrice,
-		Value:    args.Value,
-		Data:     args.Data,
+	var addr common.Address
+	if args.From != nil {
+		addr = *args.From
 	}
 
 	// Set default gas & gas price if none were set
@@ -827,12 +861,8 @@ func (args *CallArgs) ToMessage(globalGasCap uint64) types.Message {
 	if args.Data != nil {
 		data = []byte(*args.Data)
 	}
-	log.Warn("setMessage start")
-	log.Warn(args.To)
 
-	log.Warn("setMessage end")
-
-	msg := types.NewMessage(addr, common.HexToAddressGs(args.To), 0, value, gas, gasPrice, data, false)
+	msg := types.NewMessage(addr, args.To, 0, value, gas, gasPrice, data, false)
 	return msg
 }
 
@@ -850,9 +880,10 @@ type account struct {
 	StateDiff *map[common.Hash]common.Hash `json:"stateDiff"`
 }
 
-func DoCall(ctx context.Context, b Backend, args CallArgs, blockNrOrHash rpc.BlockNumberOrHash, overrides map[common.Address]account, vmCfg vm.Config, timeout time.Duration, globalGasCap uint64) (*core.ExecutionResult, error) {
-	defer func(start time.Time) { log.Debug("Executing EVM call finished", "runtime", time.Since(start)) }(time.Now())
 
+func DoCall(ctx context.Context, b Backend, args CallArgs, blockNrOrHash rpc.BlockNumberOrHash, overrides map[string]account, vmCfg vm.Config, timeout time.Duration, globalGasCap uint64) (*core.ExecutionResult, error) {
+	defer func(start time.Time) { log.Debug("Executing EVM call finished", "runtime", time.Since(start)) }(time.Now())
+	println("DoCall ETH")
 	state, header, err := b.StateAndHeaderByNumberOrHash(ctx, blockNrOrHash)
 	if state == nil || err != nil {
 		return nil, err
@@ -861,27 +892,28 @@ func DoCall(ctx context.Context, b Backend, args CallArgs, blockNrOrHash rpc.Blo
 	for addr, account := range overrides {
 		// Override account nonce.
 		if account.Nonce != nil {
-			state.SetNonce(addr, uint64(*account.Nonce))
+			state.SetNonce(common.HexToAddress(addr), uint64(*account.Nonce))
+
 		}
 		// Override account(contract) code.
 		if account.Code != nil {
-			state.SetCode(addr, *account.Code)
+			state.SetCode(common.HexToAddress(addr), *account.Code)
 		}
 		// Override account balance.
 		if account.Balance != nil {
-			state.SetBalance(addr, (*big.Int)(*account.Balance))
+			state.SetBalance(common.HexToAddress(addr), (*big.Int)(*account.Balance))
 		}
 		if account.State != nil && account.StateDiff != nil {
-			return nil, fmt.Errorf("account %s has both 'state' and 'stateDiff'", addr.Hex())
+			return nil, fmt.Errorf("account %s has both 'state' and 'stateDiff'", common.HexToAddress(addr).Hex())
 		}
 		// Replace entire state if caller requires.
 		if account.State != nil {
-			state.SetStorage(addr, *account.State)
+			state.SetStorage(common.HexToAddress(addr), *account.State)
 		}
 		// Apply state diff into specified accounts.
 		if account.StateDiff != nil {
 			for key, value := range *account.StateDiff {
-				state.SetState(addr, key, value)
+				state.SetState(common.HexToAddress(addr), key, value)
 			}
 		}
 	}
@@ -963,12 +995,37 @@ func (e *revertError) ErrorData() interface{} {
 //
 // Note, this function doesn't make and changes in the state/blockchain and is
 // useful to execute and retrieve values.
-func (s *PublicBlockChainAPI) Call(ctx context.Context, args CallArgs, blockNrOrHash rpc.BlockNumberOrHash, overrides *map[common.Address]account) (hexutil.Bytes, error) {
-	var accounts map[common.Address]account
+
+type CallArgsGs0 struct {
+	From     string `json:"from"`
+	To       string `json:"to"`
+	Gas      *hexutil.Uint64 `json:"gas"`
+	GasPrice *hexutil.Big    `json:"gasPrice"`
+	Value    *hexutil.Big    `json:"value"`
+	Data     *hexutil.Bytes  `json:"data"`
+}
+
+
+func (s *PublicBlockChainAPI) Call(ctx context.Context, args CallArgsGs, blockNrOrHash rpc.BlockNumberOrHash, overrides *map[string]account) (hexutil.Bytes, error) {
+	println("Call PublicBlockChainAPI")
+	var accounts map[string]account
 	if overrides != nil {
 		accounts = *overrides
 	}
-	result, err := DoCall(ctx, s.b, args, blockNrOrHash, accounts, vm.Config{}, 5*time.Second, s.b.RPCGasCap())
+	var addressTo common.Address;
+	addressTo=common.HexToAddress(args.To)
+	var addressFrom common.Address
+	addressFrom=common.HexToAddress(args.To)
+
+	argsCall := CallArgs{
+		From:       &addressFrom,
+		To:         &addressTo,
+		Gas:        args.Gas,
+		GasPrice:   args.GasPrice,
+		Value:      args.Value,
+		Data:       args.Data,
+	}
+	result, err := DoCall(ctx, s.b, argsCall, blockNrOrHash, accounts, vm.Config{}, 5*time.Second, s.b.RPCGasCap())
 	if err != nil {
 		return nil, err
 	}
@@ -987,10 +1044,12 @@ func DoEstimateGas(ctx context.Context, b Backend, args CallArgs, blockNrOrHash 
 		cap uint64
 	)
 	// Use zero address if sender unspecified.
-
+	log.Warn("argsFrom Check start")
 	//if args.From == nil {
 	//	args.From = new(common.Address)
+	//	args.From = new(common.Address)
 	//}
+	log.Warn("argsFrom Check end")
 	// Determine the highest gas limit can be used during the estimation.
 	if args.Gas != nil && uint64(*args.Gas) >= params.TxGas {
 		hi = uint64(*args.Gas)
@@ -1011,7 +1070,7 @@ func DoEstimateGas(ctx context.Context, b Backend, args CallArgs, blockNrOrHash 
 		if err != nil {
 			return 0, err
 		}
-		balance := state.GetBalance(common.HexToAddress(args.From)) // from can't be nil
+		balance := state.GetBalance(*args.From)  // from can't be nil
 		available := new(big.Int).Set(balance)
 		if args.Value != nil {
 			if args.Value.ToInt().Cmp(available) >= 0 {
@@ -1589,9 +1648,11 @@ func (args *SendTxArgs) setDefaults(ctx context.Context, b Backend) error {
 		if input == nil {
 			input = args.Data
 		}
+
+
 		callArgs := CallArgs{
-			From:     args.From.String(), // From shouldn't be nil
-			To:       args.To.String(),
+			From:     &args.From, // From shouldn't be nil
+			To:       args.To,
 			GasPrice: args.GasPrice,
 			Value:    args.Value,
 			Data:     input,

@@ -729,6 +729,7 @@ func (api *PrivateDebugAPI) TraceTransaction(ctx context.Context, hash common.Ha
 // You can provide -2 as a block number to trace on top of the pending block.
 func (api *PrivateDebugAPI) TraceCall(ctx context.Context, args fdgapi.CallArgs, blockNrOrHash rpc.BlockNumberOrHash, config *TraceConfig) (interface{}, error) {
 	// First try to retrieve the state
+	println("TraceCall")
 	statedb, header, err := api.eth.APIBackend.StateAndHeaderByNumberOrHash(ctx, blockNrOrHash)
 	if err != nil {
 		// Try to retrieve the specified block
